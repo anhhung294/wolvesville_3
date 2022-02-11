@@ -1,0 +1,24 @@
+{
+  "clientId": "937245655016013904",
+  "roles":{
+    "🛡️":"bodyguard",
+    "🐺":"werewolf",
+    "🧙‍♀️":"witch",
+    "👀":"seer",
+    "👲":"villager",
+    "🔫":"gunner",
+    "🤡": "fool"
+  },
+  "dayNight":["Night", "Day"],
+  "timer": 120,
+  "dieReason":{
+    "witchKill":"đã bị phù thủy giết",
+    "wolfKill":"đã bị sói giết",
+    "vote":"đã chết",
+    "shoot":"bị bắn chết"
+  },
+  "protectReason":{
+    "shield":"đã được bảo vệ",
+    "heal":"đã được phù thủy cứu"
+  }
+}
