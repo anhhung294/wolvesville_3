@@ -17,7 +17,9 @@ module.exports={
         const roleConst = file.get('roleConst');
         const preIndex = indexK.indexOf(msg.content.split(/ +/)[1]);
         const villagerIndex = indexK.indexOf('👲');
+        console.log("🚀 ~ file: next_turn.js ~ line 20 ~ villagerIndex", villagerIndex)
         var nextIndex = preIndex+1;
+        console.log("🚀 ~ file: next_turn.js ~ line 22 ~ nextIndex", nextIndex)
         while(nextIndex<villagerIndex){
             if(roleConst.includes(indexK[nextIndex])){
                 let mess = await msg.channel.send(`${indexK[nextIndex]}_turn`);
@@ -25,7 +27,7 @@ module.exports={
             }
             nextIndex++;
         }
-        await file.set('day', [(dayOrNight+1)%2,dayIndex+dayOrNight]);
+        file.set('day', [(dayOrNight+1)%2,dayIndex+dayOrNight]);
 
         file.save();
 

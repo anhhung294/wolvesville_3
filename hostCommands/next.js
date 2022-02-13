@@ -53,7 +53,7 @@ module.exports={
                 
                 for(let i=0; i< roleKey.length;i++){
                     if(roleConst.includes(roleKey[i])){
-                        let message = await msg.channel.send(`${roleKey[i]}_turn`);
+                        let message = await msg.channel.send(`next_turn ${roleKey[i]}`);
                         message.delete();
                         break;
                     }
