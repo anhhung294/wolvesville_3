@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const {MessageEmbed} = require('discord.js');
+const {MessageEmbed, MessageActionRow,MessageButton} = require('discord.js');
 const {roles} = require('../config.json');
 const editJsonFile = require("edit-json-file");
 const path = require('path');
@@ -11,18 +11,19 @@ module.exports={
     data: data,
     execute: async function(interaction){
         const guild = interaction.guild;
+        const roleKey = Object.keys(roles);
         const pathJSON = path.normalize(__dirname + `/../data/data-${guild.id}.json`);
         const file = editJsonFile(pathJSON,{
             autosave:true
         });
-        var {roleConst} = require(`../data/data-${guild.id}.json`);
-        if(!roleConst){
+        var roleConst = file.get('roleConst');
+        if(roleConst.length===0){
             return interaction.reply('Chưa chọn vai trò');
         }
 
         const embed = new MessageEmbed();
 
-        embed.setTitle("Chọn vai trò: ");
+        embed.setTitle("Chọn vai trò để xóa: ");
         embed.setColor(`#${Math.floor(Math.random()*16777215).toString(16)}`);
         embed.setTimestamp(); 
         for(let i=0; i<roleConst.length; i++){
@@ -31,37 +32,55 @@ module.exports={
         
         await interaction.reply('Chờ tí');
 
-        let message = await interaction.channel.send({ embeds: [embed]});
+        const rows = [];
 
-        Object.keys(roles).forEach( (key) => {
-             message.react(key);
-        });
+        for(let i=0; i< roleKey.length/5; i++){
+            let row = new MessageActionRow();
+            let length = (roleKey.length>(i*5+5))?(i*5+5):roleKey.length;
+            for(let j=i*5; j< length;j++){
+                row.addComponents(
+                    new MessageButton()
+                        .setCustomId(roles[roleKey[j]])
+                        .setLabel(roles[roleKey[j]].toUpperCase())
+                        .setStyle('DANGER')
+                        .setEmoji(roleKey[j])
+                );
+            }
+            rows.push(row);
+        }
 
-        const filter = (reaction, user) => {
-            return !user.bot;
+        let message = await interaction.channel.send({ embeds: [embed], components: rows});
+
+        const filter = (i) => {
+            return !i.user.bot;
         };
 
-        const collector = message.createReactionCollector({filter, time: 99999});
+        const collector = message.createMessageComponentCollector({filter, time: 99999});
 
-        collector.on('collect',async (react, user) => {
-            var {roleConst} = require(`../data/data-${guild.id}.json`);
-            const {roles} = require('../config.json');
+        collector.on('collect',async (newI) => {
+            let emoji = newI.component.emoji.name;
             for(let i=0; i< roleConst.length;i++){
-                if(react._emoji.name===roleConst[i]) roleConst.splice(i,1);
-                break;
+                if(emoji===roleConst[i]){
+                    roleConst.splice(i,1);
+                    break;
+                }
+                
             }
+
             file.set('roleConst', roleConst);
             
             let embedIn = new MessageEmbed();
-            var {roleConst:roleConstNew} = require(`../data/data-${guild.id}.json`);
-            embedIn.setTitle("Chọn vai trò: ");
+            embedIn.setTitle("Chọn vai trò để xóa: ");
             embedIn.setColor(`#${Math.floor(Math.random()*16777215).toString(16)}`);
             embedIn.setTimestamp(); 
-            for(let i=0; i<roleConstNew.length; i++){
-                embedIn.addField(roles[roleConstNew[i]], roleConstNew[i], inline= true);
+            for(let i=0; i<roleConst.length; i++){
+                embedIn.addField(roles[roleConst[i]], roleConst[i], inline= true);
             }
-            await react.users.remove(user.id)
-           .catch(error => console.error('Failed to clear reactions:', error));
+            await newI.reply({content: `Đã xóa ${roles[emoji]} ${emoji}`, ephemeral: true});
+            if(roleConst.lenth===0){
+                collector.stop();
+                return interaction.reply('Chưa chọn vai trò');
+            }
             message.edit({embeds:[embedIn]});   
         });
 

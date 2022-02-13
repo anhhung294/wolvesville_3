@@ -39,6 +39,8 @@ module.exports = async function (client, channel, title, fields, reactContent, u
             if(reason!=='messageDelete'){
                 let message = await channel.send(reason);
                 return message.delete();
+            }else if(reason==='time'){
+                return message.delete();
             }
         });
     }catch(err){

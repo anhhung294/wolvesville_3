@@ -1,15 +1,7 @@
 {
-  "host_channel": 0,
-  "wolves_chatting": 0,
-  "chatting": 0,
+  "host_channel": "935549638642110524",
+  "wolves_chatting": "936932379761713163",
+  "chatting": "936269957451382815",
   "time": 120,
-  "roleConst": [
-    "🛡️",
-    "🐺",
-    "🧙‍♀️",
-    "👀",
-    "👲",
-    "🔫",
-    "🤡"
-  ]
+  "roleConst": []
 }
