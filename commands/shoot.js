@@ -17,6 +17,7 @@ module.exports={
         });
         const day = file.get('day');
         const perRunId = interaction.user.id;
+        const gunner = await interaction.guild.members.cache.get(perRunId);
         const hostChannelId = file.get('host_channel');
         const wolfChannelId = file.get('wolves_channel');
         const hostChannel = await interaction.guild.channels.cache.get(hostChannelId);
@@ -62,14 +63,13 @@ module.exports={
                 .addOptions(options)
             );
 
-            const mess = await interaction.reply({embeds: [embed], components:[row], ephemeral: true});
+            const mess = await interaction.reply({embeds: [embed], components:[row], ephemeral: true, fetchReply: true});
 
             const filter = i =>{
                 return perRunId === i.user.id;
-                
             };
 
-            const collector = mess.createMessageComponentCollector({filter, time: 30000});
+            const collector = await mess.createMessageComponentCollector({filter, time: 30000});
 
             collector.on('collect', async (newI)=>{
                 let value = newI.values[0];
@@ -93,14 +93,9 @@ module.exports={
 
                 file.set('gunBullet', gunBullet-1);
                 
-                return collector.stop('time');
+                return collector.stop();
             });
-
-            collector.on('end', async (collected, reason)=>{
-                if(reason==='time'){
-                    return mess.delete();
-                }
-            });
+            
             return;
         }
 

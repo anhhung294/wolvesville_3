@@ -94,7 +94,7 @@ module.exports={
                     }
                 }
 
-                if(shieldPer===diePer){
+                if(shieldPer===diePer&&diePer){
                     sendReactCollector(client, msg.channel, `${diePer.displayName} ${protectReason[shield]}`);
                 }else if(healPer){
                     sendReactCollector(client, msg.channel, `${diePer.displayName} ${protectReason[heal]}`);

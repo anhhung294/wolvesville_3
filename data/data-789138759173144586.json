@@ -5,7 +5,7 @@
   "time": 120,
   "wolfFields": [],
   "day": [
-    0,
+    1,
     1
   ],
   "isGameStarted": true,
@@ -31,6 +31,6 @@
       }
     }
   ],
-  "gunBullet": 2,
+  "gunBullet": 0,
   "heal": []
 }
