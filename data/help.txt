@@ -1,0 +1,21 @@
+Everyone must join in any voice channel to start game
+- start: start game
+
+- ars: add single role
+
+- arm: add multiple roles
+
+- cr: check roles
+
+- cm: check number of villagers 
+
+- rr: remove role
+
+- rrall: remove all roles
+
+- next: next day
+ 
+- next_turn: skip your turn
+
+- end: end game
+

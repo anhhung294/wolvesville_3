@@ -15,7 +15,7 @@ module.exports={
 
         const embed = new MessageEmbed();
 
-        embed.setTitle("Chọn vai trò: ");
+        embed.setTitle("Chọn chức năng: ");
         embed.setColor(`#${Math.floor(Math.random()*16777215).toString(16)}`);
         embed.setTimestamp(); 
         roleKey.forEach( (key) => {

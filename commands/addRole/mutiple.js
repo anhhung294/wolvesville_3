@@ -25,7 +25,7 @@ module.exports={
 
         const embed = new MessageEmbed();
 
-        embed.setTitle("Chọn vai trò: ");
+        embed.setTitle("Chọn chức năng: ");
         embed.setColor(`#${Math.floor(Math.random()*16777215).toString(16)}`);
         embed.setTimestamp(); 
         embed.addFields(fields);
@@ -52,9 +52,9 @@ module.exports={
             });
 
             try{
-                i.reply(`Added ${i.values}`);
+                i.reply(`Đã thêm ${i.values}`);
             }catch(err){
-                i.editReply(`Added ${i.values}`);
+                i.editReply(`Đã thêm ${i.values}`);
             }
 
             message.edit({embeds: [embed], components: [row]});

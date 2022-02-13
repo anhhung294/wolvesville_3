@@ -6,7 +6,7 @@ const path = require('path');
 
 const data = new SlashCommandBuilder()
 	.setName('remove_role') 
-	.setDescription('Xóa vai trò');
+	.setDescription('Xóa chức năng');
 module.exports={
     data: data,
     execute: async function(interaction){
@@ -17,13 +17,13 @@ module.exports={
             autosave:true
         });
         var roleConst = file.get('roleConst');
-        if(roleConst.length===0){
-            return interaction.reply('Chưa chọn vai trò');
+        if(!roleConst||roleConst.length===0){
+            return interaction.reply('Chưa chọn chức năng');
         }
 
         const embed = new MessageEmbed();
 
-        embed.setTitle("Chọn vai trò để xóa: ");
+        embed.setTitle("Chọn chức năng để xóa: ");
         embed.setColor(`#${Math.floor(Math.random()*16777215).toString(16)}`);
         embed.setTimestamp(); 
         for(let i=0; i<roleConst.length; i++){
@@ -77,9 +77,9 @@ module.exports={
                 embedIn.addField(roles[roleConst[i]], roleConst[i], inline= true);
             }
             await newI.reply({content: `Đã xóa ${roles[emoji]} ${emoji}`, ephemeral: true});
-            if(roleConst.lenth===0){
+            if(!roleConst||roleConst.length===0){
                 collector.stop();
-                return interaction.reply('Chưa chọn vai trò');
+                return;
             }
             message.edit({embeds:[embedIn]});   
         });

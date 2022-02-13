@@ -14,12 +14,12 @@ const data = new SlashCommandBuilder()
 .addSubcommand(subcommand =>
 	subcommand
 		.setName('single')
-		.setDescription('Thêm vai trò (từng cái 1 lần)')
+		.setDescription('Thêm chức năng (từng cái 1 lần)')
 )
 .addSubcommand(subcommand=>
 	subcommand
 	.setName('multiple')
-	.setDescription('Thêm vai trò (cùng lúc nhiều cái)')
+	.setDescription('Thêm chức năng (cùng lúc nhiều cái)')
 );
 
 

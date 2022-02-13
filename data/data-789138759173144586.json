@@ -3,5 +3,32 @@
   "wolves_chatting": "936932379761713163",
   "chatting": "936269957451382815",
   "time": 120,
-  "roleConst": []
+  "wolfFields": [],
+  "day": [
+    1,
+    1
+  ],
+  "isGameStarted": false,
+  "die": [],
+  "shield": [],
+  "voteDie":[],
+  "mustDie": [],
+  "roleConst": [
+    "👀"
+  ],
+  "players": [
+    {
+      "role": "👀",
+      "id": "716298891586174977",
+      "field": {
+        "name": "yugioh",
+        "value": "👲",
+        "inline": true
+      },
+      "option": {
+        "label": "yugioh",
+        "value": "716298891586174977"
+      }
+    }
+  ]
 }
