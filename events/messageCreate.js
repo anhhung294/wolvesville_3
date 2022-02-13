@@ -13,8 +13,8 @@ module.exports = {
 	name: 'messageCreate',
 	async execute(msg) {
         let command = msg.content.trim().toLowerCase().split(/ +/).shift();
-        //TODO:undo comment
-        //if(msg.author.id!==clientId) return;
+        
+        if(msg.author.id!==clientId) return;
         
         if(hostCommands.has(command)){
             hostCommands.get(command).execute(msg.client, msg);
