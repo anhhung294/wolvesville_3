@@ -39,6 +39,10 @@ module.exports={
 		file.set('voteDie', []);
         file.set('heal', []);
         file.set('gunBullet', 2);
+
+        interaction.reply({
+            content: 'Trò chơi kết thúc'
+        });
        
         return sendReactCollector(interaction.client, interaction.channel, '-------------------------------End-------------------------------');
     }

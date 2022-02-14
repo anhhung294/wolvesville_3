@@ -88,7 +88,10 @@ module.exports={
                     file.set('players', players);
                     return sendReactCollector(newI.client, hostChannel, `${memberDie.displayName} đã bị xạ thủ bắn chết`);
                 }else{
-                    interaction.editReply('Bạn đã bắn trượt');
+                    newI.reply({
+                        content:'Bạn đã bắn trượt',
+                        ephemeral:true
+                    });
                 }
 
                 file.set('gunBullet', gunBullet-1);

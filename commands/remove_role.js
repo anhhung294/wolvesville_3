@@ -64,7 +64,6 @@ module.exports={
                     roleConst.splice(i,1);
                     break;
                 }
-                
             }
 
             file.set('roleConst', roleConst);
@@ -76,12 +75,15 @@ module.exports={
             for(let i=0; i<roleConst.length; i++){
                 embedIn.addField(roles[roleConst[i]], roleConst[i], inline= true);
             }
-            await newI.reply({content: `Đã xóa ${roles[emoji]} ${emoji}`, ephemeral: true});
+            
+            newI.reply({content: `Đã xóa ${roles[emoji]} ${emoji}`, ephemeral: true});
+
+            message.edit({embeds:[embedIn]});   
+
             if(!roleConst||roleConst.length===0){
                 collector.stop();
                 return;
             }
-            message.edit({embeds:[embedIn]});   
         });
 
         collector.on('end', (collected,reason) => {

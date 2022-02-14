@@ -1,6 +1,7 @@
 const { roles } = require('../config.json');
 const editJsonFile = require("edit-json-file");
 const path = require('path');
+const sendReactCollector = require('../features/sendReactCollector.js');
 
 module.exports={
     name: 'next_turn',
@@ -21,6 +22,7 @@ module.exports={
         while(nextIndex<villagerIndex){
             if(roleConst.includes(indexK[nextIndex])){
                 let mess = await msg.channel.send(`${indexK[nextIndex]}_turn`);
+                sendReactCollector(client, msg.channel, `Tới lượt của ${roles[indexK[nextIndex]]}`);
                 return mess.delete();
             }
             nextIndex++;

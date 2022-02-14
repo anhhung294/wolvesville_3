@@ -5,32 +5,20 @@
   "time": 120,
   "wolfFields": [],
   "day": [
-    1,
+    0,
     1
   ],
-  "isGameStarted": true,
+  "isGameStarted": false,
   "die": [],
   "shield": [],
   "voteDie": [],
   "mustDie": [],
   "roleConst": [
-    "🔫"
+    "🛡️",
+    "🐺",
+    "👀"
   ],
-  "players": [
-    {
-      "role": "🔫",
-      "id": "716298891586174977",
-      "field": {
-        "name": "yugioh",
-        "value": "👲",
-        "inline": true
-      },
-      "option": {
-        "label": "yugioh",
-        "value": "716298891586174977"
-      }
-    }
-  ],
-  "gunBullet": 0,
+  "players": [],
+  "gunBullet": 2,
   "heal": []
 }
