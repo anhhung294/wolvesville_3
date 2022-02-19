@@ -6,7 +6,7 @@ module.exports = {
 	async execute(guild) {
 		const guildId = guild.id;
     const saveObject = {
-      severId: guildId,
+      serverId: guildId,
       serverName: guild.name
     };
     DB('save', guild.id, saveObject);

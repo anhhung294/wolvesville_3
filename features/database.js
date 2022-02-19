@@ -4,20 +4,20 @@ const urlDB = process.env.urlDB;
 
 mongoose.connect(urlDB).then(()=> console.log('Connected to database!')).catch(err => console.log(err));
 
-const boardComponentsSchema = new mongoose.Scheme({
-  serverId: Number,
+const boardComponentsSchema = new mongoose.Schema({
+  serverId: String,
   serverName: String,
-  host_channelId: Number,
-  wolves_channelId: Number,
-  chatting_channelId:Number,
+  host_channelId: String,
+  wolves_channelId: String,
+  chatting_channelId:String,
   roles: [String]
 })
 
 const boardComponent = new mongoose.model('wolvesville_datas', boardComponentsSchema);
 
-module.exports = async function(command, severId , updateObject){
+module.exports = async function(command, guildId , updateObject){
   const filter = {
-    serverId = serverId
+    serverId: guildId
   };
   const cmd = command.toLowerCase();
 
