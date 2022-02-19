@@ -8,7 +8,7 @@ module.exports = {
     const saveObject = {
       severId: guildId,
       serverName: guild.name
-    }
+    };
     DB('save', guild.id, saveObject);
 		deployCommandsGuild(guildId);
 	},			
