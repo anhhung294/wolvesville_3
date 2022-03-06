@@ -19,7 +19,7 @@ module.exports = {
             });
             await game.save();
         }
-        const newObj = gameModel.findOne({
+        const newObj = await gameModel.findOne({
             guildId: interaction.guild.id
         });
         if(newObj.roles.length<=0){

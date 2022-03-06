@@ -5,7 +5,8 @@ const werewolfSchema = mongoose.Schema({
         type: String,
         require: true
     },killPerson:{
-        type: String
+        type: String,
+        default:''
     },player:{
         type: mongoose.Schema.Types.ObjectId,
         ref:'player'

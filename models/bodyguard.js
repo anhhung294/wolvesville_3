@@ -9,7 +9,8 @@ const bodyguardSchema = mongoose.Schema({
         type: Boolean,
         default: false
     },shield:{
-        type: String
+        type: String,
+        default: ''
     },player:{
         type: mongoose.Schema.Types.ObjectId,
         ref:'player'
