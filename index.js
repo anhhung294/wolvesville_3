@@ -17,6 +17,10 @@ const client = new Client({
 require('dotenv').config();
 const token = process.env.TOKEN;
 const fs = require('fs');
+const mongoose = require('mongoose');
+const urlDB = process.env.urlDB;
+mongoose.connect(urlDB).then(()=> console.log('Connected to database!')).catch(err => console.log(err));
+
 
 client.commands = new Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -37,10 +41,6 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
 }
-
-client.on('ready', (client)=>{
-    console.log(`${client.user.tag} is already!`);
-});
 
 // Login to Discord with your client's token
 client.login(token);

@@ -1,37 +1,36 @@
-const {SlashCommandBuilder} = require('@discordjs/builders');
-const { MessageEmbed, MessageActionRow, MessageSelectMenu} = require('discord.js');
-const DB = require('../features/database.js');
-const {roles: Roles} = require('../config.json');
+const { SlashCommandBuilder } = require('@discordjs/builders');
+const {roles: ViRoles} = require('../config.json');
+const gameModel = require('../models/game.js');
+
 
 const data = new SlashCommandBuilder()
-                  .setName('roles')
-                  .setDescription('Kiểm tra các chức năng hiện có');
-module.exports={
-  data: data,
-  execute: async function(interaction){
-    const guild = interaction.guild;
-    const data = await DB('get', guild.id);
-    const roles = data.roles;
-    var fields =[];
-    
-    for(let i=0; i< roles.length; i++){
-      fields.push({
-        name: Roles[roles[i]],
-        value: roles[i],
-        inline: true
-      });
-    }
+.setName('roles') 
+.setDescription('Chức năng');
 
-    const embed = new MessageEmbed();
-    embed
-      .setTitle('Các chức năng hiện có:')
-      .setColor('BLUE')
-      .setFields(fields)
-      .setTimestamp();
-
-    return interaction.reply({
-      embeds:[embed],
-      ephemeral: true
-    });
-  }
-}
+module.exports = {
+	data: data, 
+	async execute(interaction) {
+        const obj = await gameModel.findOne({
+            guildId: interaction.guild.id
+          });
+        if(!obj){
+            const game = new gameModel({
+              guildId: interaction.guild.id,
+            });
+            await game.save();
+        }
+        const newObj = gameModel.findOne({
+            guildId: interaction.guild.id
+        });
+        if(newObj.roles.length<=0){
+            return interaction.reply({
+                content:'Chưa thêm chức năng',
+                ephemeral: true
+            });
+        }
+        interaction.reply({
+            content:`Hiện có: ${newObj.roles.map(role => ' '+ViRoles[role])}`,
+            ephemeral: true
+        });
+	} 
+}; 

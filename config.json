@@ -1,23 +1,15 @@
 {
   "clientId": "937245655016013904",
   "roles":{
-    "🛡️":"bodyguard",
-    "🐺":"werewolf",
-    "🧙‍♀️":"witch",
-    "👀":"seer",
-    "👲":"villager",
-    "🔫":"gunner",
-    "🤡": "fool"
+    "bodyguard":"Bảo vệ",
+    "werewolf":"Sói",
+    "witch":"Phù thủy",
+    "seer":"Tiên tri",
+    "villager":"Dân làng",
+    "gunner":"Xạ thủ",
+    "fool": "Thằng ngốc"
   },
-  "uniqueRoles":[
-    "🛡️",
-    "🧙‍♀️",
-    "👀",
-    "🔫",
-    "🤡"
-  ]
-  ,
-  "dayNight":["Night", "Day"],
+  "dayNight":["Đêm thứ", "Ngày thứ"],
   "timer": 120,
   "dieReason":{
     "witchKill":"đã bị phù thủy giết",
