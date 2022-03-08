@@ -14,8 +14,6 @@ function shuffleArray(arr){
     return arr;
 }    
 
-
-
 module.exports={
     data: data,
     execute: async function(interaction){
@@ -34,6 +32,13 @@ module.exports={
 
         if(roleConst.length<=0) return interaction.reply('Chưa chọn chức năng');
 
+        if(game.isGameStarted){
+          return interaction.reply({
+            content: 'Vui lòng kết thúc ván trước',
+            ephemeral: true
+          });
+        }
+
         const hostChannelId = game.host_channel;
 
         if(interaction.channelId.toString()!==hostChannelId) return interaction.reply({content:'Vui lòng bắt đầu ở kênh chính', ephemeral: true});
@@ -51,7 +56,7 @@ module.exports={
 
         const roleEveryone = await guild.roles.cache.find(role => role.name ==='@everyone');
 
-        let wolfChannel = await interaction.channel.parent.createChannel('Sói', {
+        const wolfChannel = await interaction.channel.parent.createChannel('Sói', {
             type: 'GUILD_TEXT',
             permissionOverwrites: [
                 {
@@ -60,6 +65,10 @@ module.exports={
                },
              ],
           });
+
+        const chattingChannel = await interaction.channel.parent.createChannel('Thảo luận',{
+          type: 'GUILD_TEXT'
+        });
 
 
         var playersIdDis = [];
@@ -74,7 +83,8 @@ module.exports={
             await gameModel.findOneAndUpdate({
                 guildId:guild.id
             },{
-                $push:{players: savedPlayer._id}
+                $push:{players: savedPlayer._id},
+                isGameStarted: true
             });
             playerId.push(player._id);
             playersIdDis.push(userObj.id);
@@ -98,12 +108,18 @@ module.exports={
                 embeds: [embed],
                 files:[`./role_images/${roles[i]}.png`]
             });    
+
+            if(roles[i]==='werewolf'){
+              await wolfChannel.permissionOverwrites.create(member, {
+                VIEW_CHANNEL: true,
+                SEND_MESSAGE: true
+              });
+            }
+          
             await roleModel.save();
         }
-        
 
-        return interaction.reply({
-            content: 'Test successfully'
-        });
+        let mess = await interaction.channel.send('ready');
+        return mess.delete();
     }
 };

@@ -18,6 +18,12 @@ const gameSchema = mongoose.Schema({
     }, isGameStarted:{
         type:Boolean,
         default: false
+    }, day:{
+      type: Object,
+      default:{
+        dayNight: 0,
+        index: 1
+      }
     }
 });
 
