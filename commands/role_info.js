@@ -17,7 +17,7 @@ module.exports = {
         const description = interaction.options.getString('description');
         const search = files1.filter(item => item === description+'.txt');
         if(!description){
-            interaction.reply({
+            interaction.editReply({
                 content:'Vui lòng chọn nội dung cần tìm',
                 ephemeral: true
             });
@@ -29,14 +29,14 @@ module.exports = {
                    .setThumbnail(`attachment://${description}`)
                    .setColor('BLUE')
                    .setDescription(d);
-               interaction.reply({
+               interaction.editReply({
                    embeds:[embed],
                    files:[`./role_images/${description}.png`],
                    ephemeral: true
                });   
            }); 
         }else{
-            interaction.reply({
+            interaction.editReply({
                 content:'Không tồn tại chức năng này',
                 ephemeral: true
             });

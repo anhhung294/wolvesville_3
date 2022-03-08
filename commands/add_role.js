@@ -28,13 +28,13 @@ module.exports = {
       await role.save();
     }
     if(obj.isGameStarted){
-      return interaction.reply({
+      return interaction.editReply({
         content:'Trò chơi đang bắt đầu tại máy chủ này',
         ephemeral: true
       });
     }
     if(obj.roles.length+options.length>25||options.length>25){
-      return interaction.reply({
+      return interaction.editReply({
         content:'Hiện tại chỉ cho phép tối đa 25 người chơi'
       });
     }
@@ -49,6 +49,6 @@ module.exports = {
         });
       }
     });
-    interaction.reply(`Đã thêm ${options.map(item => ' '+item.value+ ' '+ ViRoles[item.name])}`);
+    return interaction.channel.send(`Đã thêm ${options.map(item => ' '+item.value+ ' '+ ViRoles[item.name])}`);
 	} 
 }; 

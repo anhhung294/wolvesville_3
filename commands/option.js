@@ -41,12 +41,12 @@ module.exports = {
 			await role.save();
 		}
 		if(obj.isGameStarted){
-			return interaction.reply({
+			return interaction.editReply({
 				content:'Trò chơi đang bắt đầu tại máy chủ này',
 				ephemeral: true
 			});
 		}
-		await interaction.reply('Chờ tí');
+		await interaction.editReply('Chờ tí');
 		const subCommand = interaction.options.getSubcommand();
 		if(optionsCommand.has(subCommand)){
 			const command = optionsCommand.get(subCommand);

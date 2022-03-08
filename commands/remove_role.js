@@ -16,11 +16,11 @@ module.exports = {
         });
         var roles = game?game.roles:[];
         if(roles.length<=0){
-            return interaction.reply('Chưa thêm chức năng');
+            return interaction.editReply('Chưa thêm chức năng');
         }
 
         if(game.isGameStarted){
-			return interaction.reply({
+			return interaction.editReply({
 				content:'Trò chơi đang bắt đầu tại máy chủ này',
 				ephemeral: true
 			});
@@ -52,7 +52,7 @@ module.exports = {
             .addOptions(options)
         );
 
-        const mess = await interaction.reply({embeds: [embed], components:[row], ephemeral: true, fetchReply: true});
+        const mess = await interaction.editReply({embeds: [embed], components:[row], ephemeral: true, fetchReply: true});
 
         const filter = i =>{
             return interaction.user.id === i.user.id;

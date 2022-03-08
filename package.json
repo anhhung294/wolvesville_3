@@ -15,7 +15,10 @@
     "discord.js": "^13.6.0",
     "dotenv": "^14.3.2",
     "edit-json-file": "^1.7.0",
-    "mongoose": "^6.2.2"
+    "fast-average-color": "^7.1.0",
+    "fast-average-color-node": "^2.1.0",
+    "mongoose": "^6.2.2",
+    "save": "^2.4.0"
   },
   "devDependencies": {
     "eslint": "^8.8.0",

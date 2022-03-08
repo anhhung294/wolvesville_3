@@ -23,12 +23,12 @@ module.exports = {
             guildId: interaction.guild.id
         });
         if(newObj.roles.length<=0){
-            return interaction.reply({
+            return interaction.editReply({
                 content:'Chưa thêm chức năng',
                 ephemeral: true
             });
         }
-        interaction.reply({
+        interaction.editReply({
             content:`Hiện có: ${newObj.roles.map(role => ' '+ViRoles[role])}`,
             ephemeral: true
         });

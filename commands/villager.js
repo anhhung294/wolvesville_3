@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const gameModel = require('../models/game.js');
+const embed = require('../features/embed.js');
 
 
 const data = new SlashCommandBuilder()
@@ -22,9 +23,16 @@ module.exports = {
             guildId: interaction.guild.id
         });
         const players = newGame.players;
-        if(players.length<=0){
-            return interaction.reply('Chưa bắt đầu trò chơi');
-        }
         
+        if(players.length<=0){
+            return interaction.editReply('Chưa bắt đầu trò chơi');
+        }
+
+        const embedSend = embed('Còn sống', 'GREEN', players.map(player => ' '+player.user.username));
+
+        return interaction.editReply({
+            embeds: [embedSend],
+            ephemeral: true
+        });
 	} 
 }; 
