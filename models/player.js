@@ -5,6 +5,9 @@ const playerSchema = mongoose.Schema({
     guildId: {
         type: String,
         require: true
+    },playerId:{
+      type:String,
+      require: true
     },
     user: {
         type:Object,

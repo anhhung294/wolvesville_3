@@ -46,7 +46,11 @@ module.exports={
             guildId: guild.id
           },{
             players:[],
-            isGameStarted: false
+            isGameStarted: false,
+            day:{
+              dayNight:0,
+              index:1
+            }
           });
 
           for(let file of files){
@@ -56,7 +60,9 @@ module.exports={
             });
           }
 
-          const embedSend = embed('----------------------------- KẾT THÚC --------------------------------', 'RED');
+          await interaction.editReply('Kết thúc');
+
+          const embedSend = embed('----------------------- KẾT THÚC -------------------------', 'RED');
 
           return interaction.channel.send({
               embeds: [embedSend]

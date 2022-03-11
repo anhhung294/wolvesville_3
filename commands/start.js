@@ -80,6 +80,7 @@ module.exports={
                 let {...userObj} = arrMembers[j].user;
                 let player = new playerModel({
                     guildId: guild.id,
+                    playerId: userObj.id,
                     user: userObj
                 });
                 let savedPlayer = await player.save();
@@ -97,7 +98,8 @@ module.exports={
                 let model = require(`../models/${roles[i]}.js`);
                 let roleModel = new model({
                     guildId: guild.id,
-                    player: playerId[i]
+                    player: playerId[i],
+                    playerId: playersIdDis[i]
                 });
 
                 await roleModel.save();

@@ -11,6 +11,10 @@ for(let file of files){
     mapController.set(file, File);
 }
 
+function checkRole(roles, role){
+  return roles.includes(role);
+}
+
 module.exports={
     name: 'next_turn',
     execute: async function(client, msg){
@@ -24,20 +28,28 @@ module.exports={
         
         const preRole = msg.content.split(/ +/)[1];
 
-        const rolesTable = arrRolesSys.filter(role => roles.includes(role));
-        
-        const firstRole = rolesTable[0];
+        const preIndex = arrRolesSys.indexOf(preRole);
 
-        if(!preRole){
-            let firstRoleController = await mapController.get(firstRole+'.js');
+        var nextRoleIndex = preIndex+1;
 
-            return firstRoleController(msg);
+        while(!checkRole(roles, arrRolesSys[nextRoleIndex])){
+          if(arrRolesSys[nextRoleIndex]!=='villager'){
+            nextRoleIndex++;
+          }else{
+            break;
+          }
         }
+
+        const nextRole = arrRolesSys[nextRoleIndex];
+
+        const roleController = mapController.get(nextRole+'.js');
+
+        if(!roleController){
+          let mess = await msg.channel.send('next');
+          return mess.delete();
+        }
+
+        return roleController(msg);
         
-        const preIndex = rolesTable.indexOf(preRole);
-
-        const roleController = await mapController.get(rolesTable[(preIndex+1)%rolesTable.length]+'.js');
-
-        roleController(msg);
     }
 };

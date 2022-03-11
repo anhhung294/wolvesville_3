@@ -5,6 +5,10 @@ const bodyguardSchema = mongoose.Schema({
         type: String,
         require: true
     },
+    playerId:{
+      type:String,
+      require: true
+    },
     attackAgain: {
         type: Boolean,
         default: false

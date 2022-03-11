@@ -5,6 +5,9 @@ const villagerSchema = mongoose.Schema({
     guildId: {
         type: String,
         require: true
+    },playerId:{
+      type:String,
+      require: true
     },
     player:{
         type: mongoose.Schema.Types.ObjectId,

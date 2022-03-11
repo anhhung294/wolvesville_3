@@ -13,7 +13,7 @@ module.exports={
         switch(day.dayNight){
             case 0:{
                 const pathNightImage = './data/night.jpg';
-                const embedSend = embed(`Night ${day.index}`, '#7114c5',undefined, pathNightImage);
+                const embedSend = embed(`Đêm thứ ${day.index}`, '#7114c5',undefined, pathNightImage);
                 
                 await msg.channel.send({
                     embeds:[embedSend],
@@ -35,7 +35,7 @@ module.exports={
                 const pathDayImage = './data/day.jpg';
                 let color = getAverageColor(pathDayImage);
                 
-                const embedSend = embed(`Night ${day.index}`, color.hex,undefined, pathDayImage);
+                const embedSend = embed(`Ngày thứ ${day.index}`, color.hex,undefined, pathDayImage);
                 
                 await msg.channel.send({
                     embeds:[embedSend],

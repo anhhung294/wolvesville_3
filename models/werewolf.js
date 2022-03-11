@@ -4,6 +4,9 @@ const werewolfSchema = mongoose.Schema({
     guildId:{
         type: String,
         require: true
+    },playerId:{
+      type:String,
+      require: true
     },killPerson:{
         type: String,
         default:''
