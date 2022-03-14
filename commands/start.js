@@ -69,7 +69,7 @@ module.exports={
                 ],
             });
 
-            const chattingChannel = await interaction.channel.parent.createChannel('thảo-luận',{
+            const chattingChannel = await interaction.channel.parent.createChannel('thảo-luận-ma-sói',{
                 type: 'GUILD_TEXT'
             });
 
@@ -104,6 +104,12 @@ module.exports={
 
                 await roleModel.save();
 
+                await playerModel.findOneAndUpdate({
+                    guildId: interaction.guildId
+                },{
+                    role: roles[i]
+                });
+
                 let member = await guild.members.cache.get(playersIdDis[i]);
                 
                 let color = await getAverageColor(`./role_images/${roles[i]}.png`);
@@ -127,7 +133,7 @@ module.exports={
                 }
             }
              
-            interaction.editReply({
+            await interaction.editReply({
                 content:'Bắt đầu'
             });
 

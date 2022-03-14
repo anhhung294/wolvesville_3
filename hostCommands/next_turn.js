@@ -18,6 +18,7 @@ function checkRole(roles, role){
 module.exports={
     name: 'next_turn',
     execute: async function(client, msg){
+       try{
         const game = await gameModel.findOne({
             guildId: msg.guildId
         }).populate('players');
@@ -45,11 +46,14 @@ module.exports={
         const roleController = mapController.get(nextRole+'.js');
 
         if(!roleController){
-          let mess = await msg.channel.send('next');
+          let mess = await msg.channel.send('end_night');
           return mess.delete();
         }
 
         return roleController(msg);
         
+       }catch(err){
+            console.log(err);
+        }
     }
 };

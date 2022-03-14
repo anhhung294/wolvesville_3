@@ -8,6 +8,9 @@ const playerSchema = mongoose.Schema({
     },playerId:{
       type:String,
       require: true
+    },role:{
+        type:String,
+        require: true
     },
     user: {
         type:Object,

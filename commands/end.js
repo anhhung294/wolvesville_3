@@ -39,7 +39,7 @@ module.exports={
           }
 
           guild.channels.cache
-          .filter(channel => channel.name.trim().toLowerCase()==='sói'||channel.name.trim().toLowerCase()==='thảo-luận')
+          .filter(channel => channel.name.trim().toLowerCase()==='sói'||channel.name.trim().toLowerCase()==='thảo-luận-ma-sói')
           .each(channel => channel.delete());
 
           await gameModel.findOneAndUpdate({

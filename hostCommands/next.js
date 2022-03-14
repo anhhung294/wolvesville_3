@@ -33,7 +33,7 @@ module.exports={
                 return mess.delete();
             }case 1:{
                 const pathDayImage = './data/day.jpg';
-                let color = getAverageColor(pathDayImage);
+                let color = await getAverageColor(pathDayImage);
                 
                 const embedSend = embed(`Ngày thứ ${day.index}`, color.hex,undefined, pathDayImage);
                 
