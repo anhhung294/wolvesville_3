@@ -54,10 +54,18 @@ module.exports={
 
             if(membersCount>roleConst.length) return interaction.editReply('Quá số lượng người chơi cho phép');
             else if(membersCount<roleConst.length) return interaction.editReply('Không đủ người chơi');
-
-            await voiceChannel.setName('Ma sói');
             
             const roleEveryone = await guild.roles.cache.find(role => role.name ==='@everyone');
+
+            await voiceChannel.edit({
+                permissionOverwrites: [
+                    {
+                    id:  roleEveryone,
+                    deny: [Permissions.FLAGS.VIEW_CHANNEL],
+                },
+                ],
+                name:'Ma sói'
+            });
 
             const wolfChannel = await interaction.channel.parent.createChannel('sói', {
                 type: 'GUILD_TEXT',

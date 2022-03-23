@@ -1,13 +1,10 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const {MessageEmbed,Permissions} = require('discord.js');
 const embed = require('../features/embed.js'); 
 const gameModel = require('../models/game.js'); 
-const playerModel =  require('../models/player.js');
 const fs = require('fs');
 const path = require('path');
 const pathData = path.normalize(__dirname+'/../models/');
 const files = fs.readdirSync(pathData).filter(file => file.endsWith('.js')&&file!=='game.js');
-const {roles: ViRoles} = require('../config.json');
 const data = new SlashCommandBuilder()
 	.setName('end')
 	.setDescription('Kết thúc ván');
@@ -30,6 +27,8 @@ module.exports={
           if(!memberHost.voice.channel) return interaction.editReply('Chưa kết nối kênh đàm thoại');
 
           const voiceChannel = memberHost.voice.channel;
+
+          if(!voiceChannel.name==='Ma sói') return interaction.editReply('Bạn phải trong kênh Ma sói');
 
           if(!game.isGameStarted){
             return interaction.editReply({

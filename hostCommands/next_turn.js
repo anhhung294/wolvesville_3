@@ -5,6 +5,8 @@ const {roles: rolesSys} = require('../config.json');
 const pathRoleController = path.normalize(__dirname+'/../rolesController/');
 const files = fs.readdirSync(pathRoleController).filter(file => file.endsWith('js'));
 const mapController = new Map();
+const {getAverageColor } = require('fast-average-color-node');
+const {MessageEmbed} = require('discord.js');
 
 for(let file of files){
     let File = require(`../rolesController/${file}`);
@@ -49,8 +51,15 @@ module.exports={
           let mess = await msg.channel.send('end_night');
           return mess.delete();
         }
+        const pathImage = `./role_images/${nextRole}.png`;
+        const color = await getAverageColor(pathImage);
+  
+        await msg.channel.send({
+          embeds:[new MessageEmbed().setTitle(`${rolesSys[nextRole]} dậy đi`).setColor(color.hex).setTimestamp().setThumbnail(`attachment://${nextRole}.png`)],
+          files:[pathImage]
+        });
 
-        return roleController(msg);
+        return roleController.turnExecute(msg);
         
        }catch(err){
             console.log(err);

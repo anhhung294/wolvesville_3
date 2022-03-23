@@ -29,6 +29,9 @@ module.exports={
             const collector = await message.createReactionCollector({filter});
             
             collector.on('collect', async (react, user) => {
+                await react.message.channel.send({
+                    embeds:[new MessageEmbed().setColor('BLUE').setTitle(`${user.username} đã tham gia`).setThumbnail(user.displayAvatarURL())]
+                });
                 if (react.count > playersId.length) { 
                     collector.stop('next');
                 }
