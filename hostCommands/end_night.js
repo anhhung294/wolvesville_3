@@ -26,6 +26,13 @@ module.exports={
                 return roles.indexOf(a)-roles.indexOf(b);
             });
 
+            rolesInGame.forEach(async (role)=>{
+                let roleController = await roleControllers.get(role);
+                if(roleController.endNightExecute(msg)){
+                    await roleController.endNightExecute(msg);
+                }
+            });
+
 
         }catch(err){
             console.log(err);

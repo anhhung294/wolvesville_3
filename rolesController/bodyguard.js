@@ -74,12 +74,10 @@ module.exports={
         mess.delete();
         
         let messNext = await msg.channel.send('next_turn bodyguard');
-        messNext.delete();
+        return messNext.delete();
+      }else{
+        return msg.channel.send('Có lỗi xảy ra, vui lòng kết thúc và bắt đầu lại.');
       }
     });
-  },
-  async endNightExecute(msg){
-
   }
-  
 };

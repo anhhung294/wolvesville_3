@@ -2,8 +2,31 @@ const embed = require('../features/embed.js');
 const gameModel = require('../models/game.js');
 const werewolfModel = require('../models/werewolf.js');
 const bodyguardModel = require('../models/bodyguard.js');
+const playerModel = require('../models/player.js');
 const {getAverageColor } = require('fast-average-color-node');
 const {MessageActionRow, MessageSelectMenu} = require('discord.js');
+
+function mode(array)
+{
+    if(array.length == 0)
+        return null;
+    var modeMap = {};
+    var maxEl = array[0], maxCount = 1;
+    for(var i = 0; i < array.length; i++)
+    {
+        var el = array[i];
+        if(modeMap[el] == null)
+            modeMap[el] = 1;
+        else
+            modeMap[el]++;  
+        if(modeMap[el] > maxCount)
+        {
+            maxEl = el;
+            maxCount = modeMap[el];
+        }
+    }
+    return maxEl;
+}
 
 module.exports= {
   async turnExecute(msg){
@@ -75,9 +98,9 @@ module.exports= {
           mess.delete();
   
           let messNext = await msg.channel.send('next_turn werewolf');
-          messNext.delete();
+          return messNext.delete();
         }else{
-          msg.channel.send('Có lỗi xảy ra, vui lòng kết thúc và bắt đầu lại.');
+          return msg.channel.send('Có lỗi xảy ra, vui lòng kết thúc và bắt đầu lại.');
         }
       });
     }catch(err){
@@ -85,6 +108,49 @@ module.exports= {
     }
   },
   async endNightExecute(msg){
+    const werewolves = await werewolfModel.find({
+      guildId: msg.guild.id
+    });
+
+    const bodyguard = await bodyguardModel.findOne({
+      guildId: msg.guild.id
+    });
+
+    const diePerId = mode(werewolves.map(ww => ww.killPerson));
+
+    let diePer = await playerModel.findOne({
+      guildId: msg.guild.id,
+      playerId: diePerId
+    });
+
+    if(bodyguard){
+      let shieldId = bodyguard.shield;
+      
+      if(diePer===shieldId){
+        await bodyguardModel.updateOne({
+          guildId: msg.guild.id
+        },{
+          attackAgain: true
+        });
+        return;
+      }
+    }
+
+    await gameModel.updateOne({
+      guildId: msg.guild.id
+    },{
+      $pull:{players: diePer._id, roles: diePer.role}
+    });
+
+    await playerModel.findByIdAndDelete(diePer._id);
+    
+    let dieRoleModel = require(`../models/${diePer.role}.js`);
+
+    await dieRoleModel.deleteOne({
+      guildId: msg.guild.id,
+      playerId: diePer.user.id
+    });
+    
 
   }
 };
