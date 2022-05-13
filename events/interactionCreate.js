@@ -8,11 +8,10 @@ module.exports = {
         if (!command) return;
 
         try {
-            await interaction.deferReply({ephemeral: true});
-            await command.execute(interaction);
+            return command.execute(interaction);
         } catch (error) {
             console.error(error);
-            await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+            await interaction.channel.send({ content: 'There was an error while executing this command!'});
         }
 	},
 };

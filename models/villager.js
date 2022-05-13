@@ -1,20 +1,17 @@
 const mongoose = require('mongoose');
 
-
 const villagerSchema = mongoose.Schema({
-    guildId: {
+    playerId:{
         type: String,
         require: true
-    },playerId:{
-      type:String,
-      require: true
     },
-    player:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref:'player'
+    guild:{
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: 'Guild',
+        require: true
     }
 });
 
-const villager = mongoose.model('villager', villagerSchema);
+const villagerModel = new mongoose.model('Villager', villagerSchema);
 
-module.exports = villager;
+module.exports = villagerModel;

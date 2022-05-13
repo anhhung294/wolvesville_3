@@ -15,16 +15,17 @@ for (const file of commandFiles) {
 
 const rest = new REST({ version: '9' }).setToken(token);
 
-module.exports= async (guildId) => {
+module.exports= async (guild) => {
 	try {
-		console.log('Started refreshing application (/) commands.', guildId);
+
+		console.log('Started refreshing application (/) commands.', guild.id, " ", guild.name);
 
 		await rest.put(
-			Routes.applicationGuildCommands(clientId,guildId),
+			Routes.applicationGuildCommands(clientId,guild.id),
 			{ body: commands }
 		);
 
-		console.log('Successfully reloaded application (/) commands.', guildId);
+		console.log('Successfully reloaded application (/) commands.', guild.id, " ", guild.name);
 	} catch (error) {
 		console.error(error);
 	}

@@ -1,14 +1,14 @@
 const deployCommandsGuild = require('../deploy-commands-guild.js');
-const gameModel = require('../models/game.js');
+const guildModel = require('../models/guild.js');
 
 module.exports = {
 	name: 'guildCreate',
 	async execute(guild) {
 		const guildId = guild.id;
-		const game = new gameModel({
+		const guildDB = new guildModel({
 			guildId: guild.id
 		});
-		await game.save();
+		await guildDB.save();
 		deployCommandsGuild(guildId);
 	},			
 };
