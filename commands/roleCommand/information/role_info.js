@@ -3,7 +3,6 @@ const fs = require('fs');
 const files1 = fs.readdirSync('./roleInfo').filter(file => file.endsWith('.txt'));
 
 module.exports ={
-    name: 'role__info',
     async execute(interaction, args){
         args.forEach(async arg =>{
             if(!files1.includes(arg+'.txt')){

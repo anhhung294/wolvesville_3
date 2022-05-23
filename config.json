@@ -1,23 +1,12 @@
 {
   "clientId": "937245655016013904",
-  "roles":{
-    "bodyguard":"Bảo vệ",
-    "werewolf":"Sói",
-    "witch":"Phù thủy",
-    "seer":"Tiên tri",
-    "villager":"Dân làng",
-    "gunner":"Xạ thủ",
-    "fool": "Thằng ngốc"
-  },
-  "dayNight":["Đêm thứ", "Ngày thứ"],
-  "timer": 120,
-  "dieReason":{
-    "witchKill":"đã bị phù thủy giết",
-    "wolfKill":"đã bị sói giết",
-    "vote":"đã chết"
-  },
-  "protectReason":{
-    "shield":"đã được bảo vệ",
-    "heal":"đã được phù thủy cứu"
-  }
+  "roles":[
+    "bodyguard",
+    "werewolf",
+    "witch",
+    "seer",
+    "villager",
+    "gunner",
+    "fool"
+  ]
 }
