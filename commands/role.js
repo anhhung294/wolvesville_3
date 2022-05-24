@@ -10,14 +10,13 @@ const data = new SlashCommandBuilder()
     .setName('information')
     .setDescription('Find information of anything')
     .addStringOption(option => option.setName('role_info').setDescription('Find information about roles.')))
-.addSubcommand(subcommand => subcommand.setName('roles_in_game').setDescription('Find the number of roles in game.'))
-.addSubcommand(subcommand => 
-    subcommand
-    .setName('setting')
-    .setDescription('Setting game.')
-    .addStringOption(option => option.setName('add_role').setDescription('Pick roles to play game.'))
-    .addStringOption(option => option.setName('remove_role').setDescription('Remove role')));
-
+    .addSubcommand(subcommand => subcommand.setName('roles_in_game').setDescription('Find the number of roles in game.'))
+    .addSubcommand(subcommand => 
+        subcommand
+        .setName('setting')
+        .setDescription('Setting game.')
+        .addStringOption(option => option.setName('add_role').setDescription('Pick roles to play game.'))
+        .addStringOption(option => option.setName('remove_role').setDescription('Remove role')))
 module.exports = {
 	data: data, 
 	async execute(interaction) {

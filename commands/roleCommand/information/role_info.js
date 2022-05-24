@@ -16,9 +16,10 @@ module.exports ={
                    .setThumbnail(`attachment://${arg}.png`)
                    .setColor('BLUE')
                    .setDescription(d);
-                return interaction.channel.send({
+                return interaction.editReply({
                    embeds:[embed],
-                   files:[`./role_images/${arg}.png`]
+                   files:[`./role_images/${arg}.png`],
+                   content:"---------------------------------------------"
                });   
             }); 
         })

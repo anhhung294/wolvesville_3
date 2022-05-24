@@ -17,7 +17,7 @@ module.exports={
         if(args.includes('all')){
             rolesInGame = [];
             await guildDB.save();
-            return interaction.channel.send({
+            return interaction.editReply({
                 content: 'All roles were removed'
             });
         }
@@ -32,7 +32,7 @@ module.exports={
 
         await guildDB.save();
 
-        return interaction.channel.send({
+        return interaction.editReply({
             content: `Remain roles after being deleted: ${rolesInGame.map(role => ' '+role)}`
         });
     }

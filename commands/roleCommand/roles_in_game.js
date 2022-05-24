@@ -8,8 +8,9 @@ module.exports = {
          
         const rolesInGame = roles?roles.map(role => ' '+role):'nothing';
 
-        return interaction.channel.send({
-            content: `Roles in game: ${rolesInGame}`
+        return interaction.editReply({
+            content: `Roles in game: ${rolesInGame}`,
+            ephemeral: true
         });
     }
 }
