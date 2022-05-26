@@ -1,0 +1,6 @@
+Role description
+Once during the game, the Mayor can reveal their role to the village. This will make their vote count as double for the rest of the game.
+
+Win conditions
+The Mayor wins with the village.
+

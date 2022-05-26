@@ -1,0 +1,15 @@
+Description
+Each night, the Spirit Seer can select up to two players. At the beginning of the next day, they will be informed if (at least one of) their selection killed last night.
+
+A blue spirit will be shown if the two selected players didn't kill anyone last night. A red spirit will be shown if at least one of them killed.
+
+Win conditions
+The Spirit Seer wins with the village.
+
+Interactions
+If nobody killed the previous night, the Spirit Seer won't have information since all players will appear blue. If the Spirit Seer is killed during the night, they won't see their information unless they're revived.
+The Spirit Seer's information cannot be manipulated by Wolf Shaman or Illusionist.
+If the werewolves killed, then all werewolves will appear red the following day, regardless of whether an individual werewolf voted or not. Similarly if the Bandit or Accomplice killed, both of them will appear red, even if one of them didn't vote.
+If a villager such as Witch, Jailer, Beast Hunter, Marksman or Avenger kills someone at night, they will also appear red to the Spirit Seer the next day. Furthermore, if Marksman tries to shoot a villager at night and dies as a result, that villager will appear red the next day, because their innocence has killed Marksman.
+If the Corruptor killed, they will appear red the following day because they killed after the day ended. If the Illusionist killed, they will appear blue because they killed during the day, not at night. The Sorcerer doesn't appear red because they cannot kill.
+If a wolf is jailed, they will appear as blue.[2]

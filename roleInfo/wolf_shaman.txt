@@ -1,0 +1,12 @@
+Role description
+At night, the Wolf Shaman can talk and vote with the other werewolves. During the day, the Wolf Shaman can enchant another player. This will make that player appear as a Wolf Shaman to the Seer, Aura Seer and Detective for the next night.
+
+The Spirit Seer's information cannot be manipulated by Wolf Shaman.
+
+The Wolf Shaman cannot enchant anybody on the first night and when they are the last werewolf alive.
+
+If the Wolf Shaman chooses someone to enchant and then gets lynched the same day, that player will still appear as Wolf Shaman that night.
+
+Win conditions
+The Wolf Shaman wins with the Werewolves.
+

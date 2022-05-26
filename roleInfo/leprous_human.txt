@@ -1,0 +1,6 @@
+Role description
+If werewolves kill the Leprous Human, they cannot kill anyone the next night.
+
+Win conditions
+The Leprous Human wins with the village.
+

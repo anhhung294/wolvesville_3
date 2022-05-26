@@ -1,0 +1,6 @@
+Description
+Each night, Mortician can select a player killed by non-villagers and uncover two possible suspects who might have killed that player. If the player was killed by a solo killer, Mortician will uncover three victims instead.
+
+Win condition
+The mortician wins with the village.
+

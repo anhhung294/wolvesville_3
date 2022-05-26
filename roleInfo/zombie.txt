@@ -1,0 +1,6 @@
+Role description
+Each night the Zombie can bite one player which will turn that player into a Zombie (unless they are a Werewolf, Cursed, President, Sect Leader or Sect members). Every zombie can bite their own person each night. The bitten player will be converted the next night.
+
+Win conditions
+The zombies win if every player has been converted into a zombie. This tends to happen a lot in games with zombies, as each zombie can bite a different player.
+

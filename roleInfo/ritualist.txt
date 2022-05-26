@@ -1,0 +1,6 @@
+Description
+During the night, Ritualist can talk anonymously with the dead. Once per game, they can cast a spell on a player. When that player dies, they will be revived after a full phase, even if Ritualist is already dead. 
+
+Win conditions
+The Ritualist wins with the village.
+

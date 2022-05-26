@@ -1,0 +1,6 @@
+Role description
+During the day, the Guardian Wolf can once per game protect a player from being lynched by the village during the voting period.[1]
+
+Win conditions
+The Guardian Wolf wins with the Werewolves.
+

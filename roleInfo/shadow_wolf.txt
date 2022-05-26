@@ -1,0 +1,9 @@
+Role Description
+The Shadow Wolf has the same abilities as an ordinary werewolf and can vote for a player to kill each night. However, once per game, the Shadow Wolf can double your team's votes during the day, while hiding all votes.
+
+Win Condition
+Shadow Wolf wins with the Werewolves.
+
+Interactions
+If two shadow wolves trick votes, every wolf's votes will count as two (and not four).[2]
+Sorcerer also gets double votes during the shadow wolf's ability.[3]

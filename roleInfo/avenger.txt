@@ -1,0 +1,9 @@
+Description
+The Avenger can select a player to kill with them when they die. They don't have any other ability and they win with village.
+
+Interactions
+If the Avenger flees, the player they chose will not die.
+If the Avenger is Corrupted by the Corruptor and has chosen a target, the Avenger will still be able to kill the chosen player.
+If several Avengers die at the exact same time (for example, due to sect) while having the same target, the target will get killed several times.[2]
+If the Avenger is the headhunter's target, gets killed by something else than the vote, and targets headhunter, headhunter will loose.[3]
+If the Avenger is checked by a spirit seer, gets killed in the middle of night, and gets revived, they will still appear as blue.[4]

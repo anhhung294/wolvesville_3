@@ -1,0 +1,6 @@
+Role description
+At the start of the game everyone knows who the president is. If the president dies, the village automatically loses (Solo killers, Solo converters and Werewolves win).
+
+Win conditions
+The president wins with the village.
+

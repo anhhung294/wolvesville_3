@@ -1,0 +1,6 @@
+Role Description
+The Loudmouth can select a player. That player's role will be revealed to everyone when the Loudmouth dies.
+
+Win Conditions
+The Loudmouth wins with the village.
+

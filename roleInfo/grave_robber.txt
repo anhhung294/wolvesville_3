@@ -1,0 +1,6 @@
+Role description
+At the beginning of the game Grave Robber is assigned a target. When the target dies, they will steal their role at the beginning of the next day, potentially switching teams.
+
+Win conditions
+The Grave Robber wins with the village or the team that their target was at.
+

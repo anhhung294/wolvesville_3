@@ -1,0 +1,18 @@
+Role description
+Each night you can either select a player to place trap on, or you can activate all of your placed traps. Players with an active trap on them cannot be killed at night. When attacked by the werewolves, the trap will trigger, killing the weakest werewolf. Every other attack will trigger the trap without killing the attacker. When a trap is triggered, all other active traps will trigger as well. You can place a trap up on up to three players.
+
+Win conditions
+The Trapper wins with the village.
+
+Strength
+The werewolves follow this order of "strength", from weakest to strongest (The advanced wolves' strength are the same as their base role):[2]
+
+Regular Werewolf
+Junior Werewolf, Split Wolf and Kitten Wolf
+Wolf Shaman, Nightmare Werewolf, Voodoo Werewolf and Wolf Trickster
+Wolf Pacifist and Guardian Wolf
+Shadow Wolf and Werewolf Berserk
+Alpha Werewolf and Stubborn Werewolf
+Wolf Seer
+Interactions
+The Trapper’s traps have the same behaviours as the Beast hunter's trap.

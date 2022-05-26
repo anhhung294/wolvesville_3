@@ -1,0 +1,11 @@
+Role description
+Each night the Cannibal gets a skull. The cannibal can decide whether to use their skulls to kill players, or to save them up for another night. The maximum is 5 skulls.
+
+Win Condition
+The Cannibal wins if they are the last player alive.
+
+Interactions
+If Cannibal tries to eat someone who is protected, they won't kill them but will still loose a skull.
+If Cannibal tries to eat a protector along with the player they protect, they will only kill the protector.[2]
+If Cannibal eats Headhunter's target at the same time as Headhunter, Headhunter will loose.[3]
+If Cannibal is nightmared, they will still obtain an additional skull during the night.[4]

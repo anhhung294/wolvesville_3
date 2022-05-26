@@ -1,0 +1,6 @@
+Role description
+The Alchemist has two potions, red and black. Every night, he can give his potions to 2 different players. Both of them will be warned that they might die at the end of the day, but only the player with the black potion will actually die, the red potion will only kill the second time it's given to that same player. They don't know which potion they have. 
+
+Win conditions
+The Alchemist wins if he is the last player alive.
+

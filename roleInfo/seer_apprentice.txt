@@ -1,0 +1,8 @@
+Role description
+The Seer Apprentice starts out as an ordinary villager with no special powers. However, if any of the Category:Investigators dies. ( Except of : Wolf Seer , Sorcerer  and other evil side Investigators. ) 
+
+they will become a new one after the previous one died. If the original Investigator is revived, the Seer Apprentice will be converted back to normal Seer Apprentice with no ability.
+
+Win conditions
+The Seer Apprentice wins with the village.
+

@@ -1,0 +1,3 @@
+Role description
+When it is this player's turn, they can decide to open their eyes. If they open their eyes, they have a 20% chance of detecting a werewolf. However, there is a 5% chance she will die when seeing this werewolf.
+

@@ -1,0 +1,10 @@
+Role description
+At night, the Split Wolf can talk and vote with the other werewolves.
+
+During the first three nights, they can choose to bind themselves to another player. If they do this, they will count double to the werewolf win condition. However, if either of the wolf or the target dies, the other will also die.
+
+The bind takes one day to be completed, so if you bind to an player at night one, during the next day you will see the paw mark on your target indicating the binding, but only in the night two the bind will be completed.
+
+Win conditions
+The Split Wolf wins with the Werewolves.
+

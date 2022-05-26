@@ -1,0 +1,6 @@
+Role description
+Each night the Sect Hunter can select one player. If that player is the Sect Leader or part of the Sect, they will die.
+
+Win conditions
+The Sect Hunter wins with the village.
+

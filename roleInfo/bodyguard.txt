@@ -1,0 +1,13 @@
+Role description
+Each night the Bodyguard can select one player to protect. They also automatically protect themselves. If the Bodyguard or the player they are protecting gets attacked, they will survive. However, if they are attacked again the bodyguard will die.
+
+Win conditions
+The Bodyguard wins with the village.
+
+Interactions
+If two Bodyguards protect each other, and the wolves attack one of them, the one attacked will receive the hit.[2]
+If Bodyguard gets killed at the middle of the night, the protection won't work.[3]
+If Bodyguard protects a solo killer while the solo killer is attacked by wolves, Bodyguard does not get hit.[4] If frenzy is activated, Bodyguard will die.[5]
+If multiple Bodyguards protect the same person, the one who gets hit is chosen randomly.[6]
+If Bodyguard has been attacked but receives a shield from Forger, they will still die when protecting someone else who gets attacked.[7]
+the bodyguard when attacked 1 time will not have an effect but if he is attacked again he will die

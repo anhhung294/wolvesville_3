@@ -1,0 +1,9 @@
+Role description
+The Arsonist can choose from two actions to perform each night. They can either douse 2 players in gasoline, or ignite all doused players, killing them. The Arsonist cannot be killed by the Werewolves.
+
+In-game description
+Every night you can either select two players to douse with gasoline, or ignite all doused players which kills them. You cannot be killed by werewolves.
+
+Win conditions
+The Arsonist wins if they are the last player alive.
+

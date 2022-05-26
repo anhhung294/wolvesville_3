@@ -1,0 +1,6 @@
+Role description
+After the first night the Grumpy Grandma can select one player that cannot talk or vote during the next day.
+
+Win conditions
+The Grumpy Grandma wins with the village.
+

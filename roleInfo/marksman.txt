@@ -1,0 +1,6 @@
+Role description
+At night, the Marksman marks a player as a target. After the next day, they can choose to kill or change the target. If they choose to change it, they need to wait another night to be able to shoot. Similar to the priest, if the Marksman tries to kill a villager, the shot will backfire and kill the Marksman, otherwise the target will be killed. Similar to the gunner, he has two arrows. The Marksman can also shoot during the day time.
+
+Win conditions
+The Marksman wins with the village.
+

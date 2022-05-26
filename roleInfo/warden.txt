@@ -1,0 +1,6 @@
+Role description
+Select two targets each day to put into prison the next night. At night, the targets can talk to each-other while Warden listens. The targets cannot act or be attacked, but if Warden finds either one suspicious, they can give one target a weapon. Villagers can use this weapon to kill the other player. If both of the targets are werewolves they can choose to kill Warden during the night.
+
+Win conditions
+The Warden wins with the village.
+

@@ -1,0 +1,6 @@
+Role description
+The Handsome Prince has no night actions. The first time the village try to lynch him, he survives and instead reveals his role.
+
+Win conditions
+The Handsome Prince wins with the village.
+

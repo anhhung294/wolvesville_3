@@ -1,0 +1,11 @@
+Role description
+During the night, the Sheriff can select someone to watch. If that player dies during the night, during the day you will uncover two possible suspects who might have killed that player (one of them is the killer).
+
+Win conditions
+The Sheriff wins with the village.
+
+Interactions
+If Sheriff watches the person that got killed by werewolves, the Sheriff will see the weakest werewolf.
+If the Sheriff is lucky enough, it is possible that the Sheriff will see two werewolves or one werewolf and one killer.
+If Sheriff looks at a corrupted player, they will still be able to get their info.[2]
+If Sheriff looks at a red lady who visits an evil role, they won't be able to get their info.[3]

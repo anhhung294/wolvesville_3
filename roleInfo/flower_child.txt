@@ -1,0 +1,6 @@
+Role description
+Once during a game, the Flower Child can protect a player from being lynched by the village during the voting period of Day. They can protect themselves.
+
+Win conditions
+The Flower Child wins with the village.
+

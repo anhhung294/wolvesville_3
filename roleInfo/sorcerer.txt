@@ -1,0 +1,8 @@
+Role description
+Although the Sorcerer is on the Werewolves team, they are not technically a Werewolf, meaning they cannot talk to/vote with the Werewolves at night. Instead, each night, the Sorcerer can view a player's role. Unlike the Wolf Seer, the result of the player who has been checked will not be shared with the Werewolves. However, when the Sorcerer is the last alive player on the Werewolves team, they will turn into a Regular Werewolf, losing their seer ability.
+
+At the start of the game, the Sorcerer will be disguised as a random informant role present in the current game. For example, if there are an Seer and a Detective in a game, the game will choose randomly between the Seer and the Detective, and both informants will see the Sorcerer as the selected role when checked afterwards.
+
+Win conditions
+The Sorcerer wins with the Werewolves.
+

@@ -1,0 +1,6 @@
+Role Description
+Each night the Junior Werewolf can vote on a player to kill like a regular Werewolf. They can also select one player to die with them. They can select this player during any phase of the game. The Junior's selected player will not die if they flee. 
+
+Win Conditions
+The Junior Werewolf wins with the Werewolves.
+

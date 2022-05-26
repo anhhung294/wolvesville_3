@@ -1,0 +1,6 @@
+Role Description
+The Illusionist can disguise people every night. Disguised people will appear to be Illusionists to seers. He can also kill all disguised people during the day. The Illusionist cannot be killed by Werewolves.
+
+Win Conditions
+The Illusionist wins if they are the last player alive.
+

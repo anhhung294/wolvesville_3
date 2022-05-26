@@ -1,0 +1,12 @@
+Role description
+The Headhunter has no special abilities. On the first night of the game, a random villager will be assigned as their target. They win if the village lynches their target during the day.
+
+If their target dies before the Headhunter dies, in a way other than being lynched, then the Headhunter becomes a regular villager and wins with village.
+
+A target icon will be shown on the Headhunter's target.
+
+Win conditions
+The Headhunter wins if their target is lynched by the village. They also can win with the village if they become a villager at some point in the game.
+
+The Headhunter only targets villagers, except for Gunner, Priest, Mayor, Cursed, Pacifist and Flower Child.
+

@@ -1,0 +1,12 @@
+Role description
+Each night, the Tough Guy can select one player to protect. If that player or the Tough Guy gets attacked, the tough guy sees the role of the weakest werewolf and/or solo killer and will live until the next night before dying. This enables them to provide any information they found about the werewolves and/or the solo killer.
+
+Win conditions
+The Tough Guy wins with the village. It is likely they will be dead by the time the village has won.
+
+Interactions
+The Tough Guy cannot be "attacked" by the Arsonist.
+If the Corruptor attacks the Tough Guy, they can see who the Corruptor is, but the Tough Guy will still be glitched.
+If both the Werewolves and the Serial Killer attack the Tough Guy or the protected player, the Tough Guy will see both the weakest werewolf and the Serial Killer.
+If a Zombie tries to convert someone the Tough Guy is protecting, the target will be protected and Tough Guy will see the Zombie's role. Tough Guy will then die at the end of next days voting stage. Zombie can however still convert Tough Guy if they attack them directly.
+If the Bandit attacks the Tough Guy without an accomplice, the Tough Guy will be converted instead of being attacked and dying before the day ends. However ,if the Bandit attacks the Tough Guy with an accomplice, the Tough Guy will see who the accomplice is (Due to the fact that the Bandit is stronger than the accomplice) and will die at the end of the day.

@@ -1,0 +1,13 @@
+Role description
+At night, the Bomber can place a bomb which will kill a maximum of 3 players. The following night, the bomb explodes, killing the selected players. The night after that, the bomber can place a new bomb. This process of placing a bomb every two nights continues until the bomber dies. The Bomber cannot be killed by the Werewolves.
+
+Win conditions
+The Bomber wins if they are the last player alive. 
+
+Interactions
+Bombs can be rotated by clicking on the central player (can be horizontal, vertical and diagonal).
+The bomb can't kill the Bomber. If the Bomber and one of the victims of the first Bomb placed end up being a couple (because of the Cupid), the bomb will not kill the Bomber's lover but will still kill the other 2 players.
+The bomb won't explode if Bomber is killed during the day, but will still explode if Bomber is killed during the night.
+The bomb is removed if the player is killed, then revived.[1]
+The bomb's explosion bypasses a possible nightmare.[2]
+Bomber bypasses all protections.

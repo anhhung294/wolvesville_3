@@ -1,0 +1,6 @@
+Role description
+You can choose a player during the day. when that player dies by any means other than the werewolves, you steal their appearance; they will be seen as wolf trickster and you will be seen as their role when checked.
+
+Win condition
+The Wolf Trickster wins with the Werewolves.
+

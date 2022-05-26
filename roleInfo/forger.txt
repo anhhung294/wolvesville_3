@@ -1,0 +1,6 @@
+Role description
+You can forge two shields and then a sword. Forging takes one day and each new item must be given to another player before forging the next once. Each shield will save a player once from being attacked at night. The sword can be used to kill another player.
+
+Win conditions
+The Forger wins with the village.
+

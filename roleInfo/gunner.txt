@@ -1,0 +1,6 @@
+Role description
+The Gunner has no special abilities during the night. During the day, the Gunner has two bullets that it can use. After they use the first bullet, the shot is so loud that everyone will know who the Gunner is. The bullets will kill a player no matter what protection they have. They can only use one bullet per day.
+
+Win conditions
+The Gunner wins with the village team.
+

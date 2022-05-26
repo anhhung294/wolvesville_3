@@ -1,0 +1,6 @@
+Role description
+The Fool has no special abilities besides talking and voting during the day.
+
+Win conditions
+The Fool wins the game if they are lynched by the village.
+

@@ -1,0 +1,6 @@
+Role description
+The Cursed begins the game on the village team. If the cursed is attacked by the werewolves, it does not die but becomes a regular Werewolf. The cursed can also be protected from the bite just like a regular attack.
+
+Win conditions
+The Cursed wins with the village if it remains a cursed until the end of the game. However, if it becomes a werewolf, it wins with the wolves.
+

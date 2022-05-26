@@ -1,0 +1,8 @@
+Role description
+The Kitten Wolf is a normal member on the Werewolves team who can talk and vote with the werewolves, just like a Regular Werewolf. However, when the Kitten Wolf dies, the other Werewolves can choose someone to convert on the night after, replacing their normal nightly attack. This attack still counts as a direct attack and can be blocked off by protective roles such as the Doctor, which will cause the ability to be wasted.
+
+The Kitten Wolf wins with the Werewolves.
+
+Win conditions
+The Kitten Wolf wins with the Werewolves.
+

@@ -1,0 +1,6 @@
+Role description
+Once a game, the Naughty Boy can select two players who will have their roles switched. This ability does not come into action until the next night.
+
+Win conditions
+The Naughty Boy wins with the village.
+

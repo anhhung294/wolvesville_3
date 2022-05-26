@@ -1,0 +1,6 @@
+Role description
+The sister is an ordinary villager, except it can see other players with the same role.
+
+Win conditions
+The sister wins with the village.
+

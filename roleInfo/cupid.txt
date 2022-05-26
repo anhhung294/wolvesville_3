@@ -1,0 +1,6 @@
+Role description
+On the first night, the Cupid selects 2 players to become a Love Couple. These players are now loyal to each other and not their original team (although the players can still win with their original team). If one of these players dies, the other will die as well. Can be chosen as an accomplice by the bandit.
+
+Win conditions
+The Cupid wins with the village. They also win if only the couple or themself and the couple are the only players left.
+

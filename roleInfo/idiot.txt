@@ -1,0 +1,6 @@
+Role description
+If the Idiot gets voted out, they do not die but instead their role get shown to the other players. The Idiot cannot vote for the rest of the game if this happens.
+
+Win conditions
+The Idiot wins with the village.
+

@@ -1,0 +1,6 @@
+Role description
+During the Night, Santa Claus can either send a “HO HO HO” to all players 2 times per game. Only one "HO HO HO" may be sent each night. He can also send a gift to a dead but online player a “Santa” foreground item 4 times per game (only one gift per night) .
+
+Win conditions
+Santa Claus wins with the Village.
+

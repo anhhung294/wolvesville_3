@@ -1,0 +1,7 @@
+Role Description
+In each game, you have 2 cards to give to other players. The players you give cards to can use these cards to reveal their roles.
+
+Interactions
+When Fortune Teller selects someone, they will receive the card immediately and can use it once anytime.
+Fortune Teller can give cards whenever they want. It doesn't have to be the first night.
+If Fortune Teller Dies, selected players will still get their cards and can use them.

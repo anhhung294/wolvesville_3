@@ -1,0 +1,3 @@
+Role description
+You are a villager who only appears during the Easter time. Each night you automatically send a greeting to all players. Additionally you can gift a special item to a dead but still connected player. These gifts have no further effect on the game![1]
+

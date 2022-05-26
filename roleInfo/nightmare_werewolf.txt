@@ -1,0 +1,6 @@
+Role description
+Twice during the day in a game, the Nightmare Werewolf can decide to put a player to sleep for the next night. This means that the sleeping player cannot use their role abilities the night after they were put to sleep.
+
+Win conditions
+The Nightmare Werewolf wins with all the Werewolves.
+

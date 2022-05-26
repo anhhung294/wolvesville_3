@@ -1,0 +1,6 @@
+Role description
+Each night the Aura Seer can select one player. They can see whether this player is good, evil or unknown. If the player is good, they are on the village and if they are evil they are on the Werewolves. The Wolf Shaman's enchantment can make an Aura Seer see a player as evil, regardless of their actual aura. The Illusionist's disguise can make an Aura Seer see a player as Unknown.
+
+Win conditions
+The Aura Seer wins with the village team.
+

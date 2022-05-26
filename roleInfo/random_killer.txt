@@ -1,0 +1,15 @@
+Description
+It gives a random killer role assigned to the player.
+
+Options
+This role could be one of the following:
+
+Serial Killer
+Arsonist
+Alchemist
+Bomber
+Sect Leader
+Zombie
+Illusionist
+Cannibal
+Bandit

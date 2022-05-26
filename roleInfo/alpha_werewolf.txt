@@ -1,0 +1,6 @@
+Role description
+The Alpha Werewolf has the same abilities as a regular Werewolf and can vote on one player to kill each night. However, when the Alpha Werewolf votes on a player to kill during the night, their vote counts twice. Additionally, once per day, Alpha Werewolf can send a private message to the other wolves.
+
+Win conditions
+The Alpha Werewolf wins with the Werewolves.
+

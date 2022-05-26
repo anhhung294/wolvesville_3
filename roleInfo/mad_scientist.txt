@@ -1,0 +1,6 @@
+Role Description
+The Mad Scientist does not have any special abilities at night. However, if they are killed they release a toxin which will kill the players on either side of them.
+
+Win conditions
+The Mad Scientist wins with the village.
+

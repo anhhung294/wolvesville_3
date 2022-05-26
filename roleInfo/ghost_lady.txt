@@ -1,0 +1,6 @@
+Role description
+At night, the Ghost lady can visit another player. If that player gets attacked, the other player will be protected and the Ghost lady will be revealed to them. Ghost lady cannot visit after protecting once.
+
+Win conditions
+The Ghost lady wins with the village.
+

@@ -1,0 +1,6 @@
+Role description
+Two times per game, the Night Watchman can select a player to protect. That player cannot be killed that night. Additionally, Night Watchman can see what players are being protected by other protectors.
+
+Win conditions
+The Night Watchman wins with the village.
+

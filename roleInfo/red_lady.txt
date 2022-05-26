@@ -1,0 +1,6 @@
+Description
+Each night the Red Lady can visit another player. If the Red Lady gets attacked when visiting another player, she won't die. However, if the Red Lady visits a Werewolf or Solo Killer, she will die. If the Red Lady visits a player that is killed, both die.
+
+Win Conditions
+Red Lady wins with the village.
+

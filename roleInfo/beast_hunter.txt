@@ -1,0 +1,29 @@
+Role description
+At night, the Beast Hunter can place their trap on any player. This trap will activate the following night and will kill the weakest werewolf if the player is attacked. If the trap is moved, it will not activate until the following night. The Beast Hunter can place their trap on themselves.
+
+Win conditions
+The Beast Hunter wins with the village.
+
+Strength
+The werewolves follow this order of "strength", from weakest to strongest:
+Werewolf
+Junior Werewolf
+Nightmare Werewolf
+Kitten Wolf
+Wolf Shaman
+Wolf Pacifist
+Shadow Wolf
+Guardian Wolf
+Werewolf Berserk
+Alpha Werewolf
+Wolf Seer
+
+Interactions
+The Beast Hunter’s trap cannot kill solo killers nor converters, but will prevent an attack. The only exception is Bomber.
+If several attacks happen on someone trapped, the trap will prevent all attacks at once.
+If several traps are placed on one person and they get attacked, all traps will be triggered but only one wolf will die.
+If Beast Hunter is attacked by werewolves while their trap is on themselves and the wolves toggled frenzy, Beast Hunter will still survive and kill a wolf.
+If the trap was on someone else, both a wolf and Beast Hunter die.
+If Beast Hunter is attacked by werewolves and selected by Bandit, they will kill a wolf and become an Accomplice.
+If Beast Hunter has a trap on someone who dies and gets revived (without triggering the trap), the trap will still be active.
+If Beast Hunter has a trap on themselves and is in love with a villager who gets attacked by serial killer, while Beast Hunter gets attacked by werewolves, the couple will die, but the trap will still kill a wolf.

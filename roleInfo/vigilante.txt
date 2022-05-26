@@ -1,0 +1,8 @@
+Role description
+During the day, the Vigilante can either shoot or reveal another player. Both actions can be done once, but not during the same day.                                                                                                     
+
+When the Vigilante reveals the player, the village can still vote that day.
+
+Win conditions
+The Vigilante wins with the village.
+

@@ -1,0 +1,6 @@
+Role Description
+The Analyst can check two chosen players' aura (similar to Aura seer) per night. If the two players have the same aura, Analyst will not be able to check the following night.
+
+Win Conditions
+Unless the Analyst is coupled, or part of the Instigator team, they win with Village. 
+

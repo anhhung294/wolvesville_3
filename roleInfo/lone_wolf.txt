@@ -1,0 +1,6 @@
+Role description
+You are a regular werewolf, except you only win if you are the last werewolf alive.
+
+Win conditions
+The Lone Wolf only wins if they are the last Werewolf alive.
+

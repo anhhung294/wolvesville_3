@@ -1,0 +1,13 @@
+Role Description
+Each night the Corruptor can select one player to 'glitch'. That player will not be able to speak, vote, use their role ability or send emojis the following day and will die after the voting. That player's role will not be revealed when they die. Instead, it will be replaced by a question mark.
+
+When a person is corrupted, they will receive a message. An icon will also show in the middle of the screen.
+
+Win Conditions
+The Corruptor wins if they are the last player alive.
+
+Interactions
+The Corruptor cannot kill a jailed or protected target.
+Red Lady will also be glitched if the player she visited is corrupted.
+If the Corruptor gets lynched or shot by gunner or Illusionist, the "glitched" player will survive and will regain the ability to talk and vote the next day.
+If corruptor kills seer, seer apprentice won't turn into seer.[2]

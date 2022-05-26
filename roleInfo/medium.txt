@@ -1,0 +1,6 @@
+Role description
+During the night, the Medium can talk with dead players. He will appear as "Medium" when talking to dead players. Once per game, they can revive a dead player.
+
+Win conditions
+The Medium wins with the village.
+

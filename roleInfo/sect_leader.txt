@@ -1,0 +1,6 @@
+Role description
+Each night, the Sect Leader can select one player to convert to their team, known as the Sect. This player must be from the village team, or be a voting role, otherwise they will not be converted. If the Sect leader dies, all sect members die too.
+
+Win conditions
+The Sect Leader wins if every remaining villager is converted to the Sect. All wolves must die as well.
+

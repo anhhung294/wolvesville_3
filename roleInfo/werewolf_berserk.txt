@@ -1,0 +1,13 @@
+Role description
+Once per game, the Werewolf Berserk can activate a 'frenzy' during the day. During the night of the frenzy, if Werewolves attacks their target while protected, any protector of the victim will simultaneously die, along with the victim.
+
+On the night the 'frenzy' is activated, a horn icon will appear in the middle of the screen to all werewolves. A horn sound effect will also play. If the Werewolf Berserk is killed at any time during the night while their skill is activated, the effects of the frenzy will immediately be cancelled.
+
+Win conditions
+The Werewolf Berserk wins with the Werewolves.
+
+Interactions
+If two Werewolf Berserk toggle frenzy, both will use up their ability even though it'll only count once.[1]
+If a Werewolf Berserk toggles frenzy and attacks someone who is protected and attacked by a solo killer, the protector will die but the protected player will stay alive.
+If a Werewolf Berserk toggles frenzy and attacks a solo killer (immune to wolves) who is also protected, the protector will die but the solo killer will stay alive.[2]
+If a Werwolf Berserk toggles frenzy and attacks a trapped player, both Beast Hunter and the weakest werewolf will die.[3]

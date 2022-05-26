@@ -1,0 +1,7 @@
+Role description
+ 	 	 	 		 		 		 			Serial killer's knife 		 	 
+Each night the Serial Killer can kill one player. They cannot be killed by the Werewolves. However, they are in competition with the Werewolves, as both win if they kill enough people.
+
+Win conditions
+The Serial Killer wins if they are the last player alive.
+

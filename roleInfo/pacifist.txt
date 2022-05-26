@@ -1,0 +1,6 @@
+Role description
+During the day the Pacifist can reveal a player's role. They can only do this once per game. Once the Pacifist reveals the player, the village cannot vote that day.
+
+Win conditions
+The Pacifist wins with the village.
+

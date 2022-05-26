@@ -1,0 +1,6 @@
+Role description
+At the start of the game, two players will join your team as recruits: one a villager or voting role, and one werewolf or solo killer. All members of your team can only win together and no longer with with their original team. As the instigator you can send private messages to your team. The two recruits are bound to each other, if one dies, the other will die as well. 
+
+Win condition
+The Instigator wins with the Instigator Team.
+

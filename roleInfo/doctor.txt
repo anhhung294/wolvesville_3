@@ -1,0 +1,9 @@
+Role description
+Each night the Doctor can select one player to protect. If this player is attacked by the Werewolves, they don't die in that night. The Doctor can protect every night when they are alive. The Doctor cannot protect themselves.
+
+In-game description
+Chose one player to protect every night. That player cannot be killed that night.
+
+Win conditions
+The Doctor wins with the village.
+

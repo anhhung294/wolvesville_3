@@ -1,0 +1,11 @@
+The obtained role will be one of:
+
+Seer
+Jailer
+Gunner
+Medium
+Detective
+Fortune Teller
+Forger
+
+Note: There can't be more than one jailer in a game

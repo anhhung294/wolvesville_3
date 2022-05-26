@@ -1,0 +1,18 @@
+Role description
+At night, the Bandit can convert another player to be their Accomplice. Then each night, the Bandit and the Accomplice can select a player to kill.
+
+If they vote different players, then the deciding vote will be the Accomplice's vote.
+
+The Accomplice can be killed by werewolves.
+
+Only villagers and random voting roles can be converted to Accomplice. Trying to convert a werewolf will result in the Bandit killing that werewolf. 
+If the Accomplice dies, the Bandit can select a new Accomplice the next night. If there are several accomplices in the same game, all of them win when the Bandit wins.
+
+Any Accomplice can kill without Bandit, but the Bandit needs an Accomplice to kill.
+
+Win Conditions
+The Accomplice wins if all alive players belong to Bandits team.
+
+Interactions
+If Sheriff checks Bandit's target while Accomplice is nightmared, Bandit will show up as suspect (instead of Accomplice).[2]
+If Bandit doesn't vote at night, they will appear blue to the Spirit Seer.[3]

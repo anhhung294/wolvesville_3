@@ -1,0 +1,6 @@
+Role description
+The drunk is a villager who cannot talk during the day. However, they can still participate in the votes.
+
+Win conditions
+The Drunk wins with the village.
+

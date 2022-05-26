@@ -1,0 +1,12 @@
+Role description
+Each night, the detective selects two players. He will then see immediately if these two players are on the same team or not. If the players are on the same team, the = symbol will be shown. If they are on different teams, the ≠ symbol will be shown.
+
+The possible teams are: Village, Werewolves, Solo.
+
+Random Voting roles and Solo Killers are all in their own different solo teams.
+
+The Detective's information can be manipulated by a Wolf Shaman and the Illusionist. If a shamaned/disguised villager is checked against another villager, they will appear to be in different teams due to the enchantment/deluding.
+
+Win conditions
+The Detective wins with the village.
+

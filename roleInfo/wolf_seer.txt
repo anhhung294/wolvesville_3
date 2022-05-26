@@ -1,0 +1,6 @@
+Role description
+Each night the Wolf Seer can see the role of one player. They can talk with the other Werewolves and provide any information they found. However, the Wolf Seer cannot vote on a player to kill unless they resign their ability to see roles. If they are the last Werewolf alive they instantly resign their seeing ability.
+
+Win conditions
+The Wolf Seer wins with the Werewolves.
+

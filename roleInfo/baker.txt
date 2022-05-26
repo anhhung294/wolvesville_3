@@ -1,0 +1,6 @@
+Role description
+Each night you can select a player to give them bread, giving them an extra vote for the next day.
+
+Win condition
+The Baker wins with the Village.
+

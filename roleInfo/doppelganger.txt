@@ -1,0 +1,6 @@
+Role description
+At the first night, the Doppelganger can select one player. If this player dies, the Doppelganger will take their role. A message will appear saying " You are a [target's role]. Your target has died and you have taken his role."
+
+Win conditions
+The Doppelganger wins with the village.
+

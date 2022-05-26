@@ -1,0 +1,6 @@
+Description
+Every time a Villager role is lynched, Preacher gains an extra vote for their ability. If the Preacher uses this ability, they gains these extra votes for the day's voting phase. Once used, extra votes are lost for the rest of the game. 
+
+Win Conditions
+The Preacher wins with the Village.
+

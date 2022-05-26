@@ -1,0 +1,9 @@
+Role description
+Each night, the Seer can see the role of one player.
+
+Win conditions
+The Seer wins with the village.
+
+Tips
+Each night, wait until the timer is at about 10s before checking someone's role. This prevents checking someone's role who dies or flees during the night.
+If the game has Bomber, tweak your strategy and on even nights (when the Bomber's bombs go off), check someone's role as quickly as possible. This way, you will still have information even if Bomber kills you, moreover, if Medium is alive, you can immediately tell them who you checked on the same night.

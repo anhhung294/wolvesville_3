@@ -1,0 +1,8 @@
+Role description
+The Wise Man cannot be killed by the Werewolves.
+
+Win conditions
+The Wise Man wins with the village among us.
+
+Strategy
+Try to keep yourself hidden, because you can potentially waste an attack of the Werewolves.

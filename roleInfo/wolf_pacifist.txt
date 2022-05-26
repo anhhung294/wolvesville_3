@@ -1,0 +1,9 @@
+Role description
+Once per game The Wolf Pacifist can reveal the role of a player to everybody. Once the Wolf pacifist reveals the player, the village cannot vote that day.
+
+Win conditions
+The Wolf Pacifist wins with the Werewolves.
+
+Trivia 
+It was introduced in the 0.44.1 update.
+The Wolf Pacifist cannot reveal other Werewolves.

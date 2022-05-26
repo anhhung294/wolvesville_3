@@ -1,0 +1,12 @@
+Description
+The Jailer can select one player to jail each day. That night, the Jailer can talk to their prisoner privately. During this time, the jailed player cannot use their abilities or send roses. That prisoner won't be able to use emojis in jail. Once every game, they can execute their prisoner.
+
+The prisoner can't be killed by direct attacks neither on that night, but it can get killed by Bomber or Arsonist if they were bombed or doused a previous night. The prisoner can also get killed by village killing roles such as Witch or Marksman.
+
+When jailed, the person being jailed will have cell bars over their avatar. This can only be seen by the target and the Jailer, and if they are a Werewolf or Zombie, the other werewolves (or zombies) will see the cell bars over the jailed player as well.
+
+In special custom game modes (all random roles), there can only be 1 Jailer per game.
+
+Win conditions
+The Jailer wins with the village.
+

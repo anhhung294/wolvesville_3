@@ -1,0 +1,3 @@
+Description
+This role gives access to a random role in the game.
+

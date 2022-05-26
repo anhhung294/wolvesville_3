@@ -1,0 +1,9 @@
+Role description
+The Villager has no special abilities. 
+
+In-game description
+You are a regular villager without any abilities. You belong to the village team.
+
+Win conditions
+The Villager wins with the village.
+
