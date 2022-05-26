@@ -1,12 +1,3 @@
 {
-  "clientId": "937245655016013904",
-  "roles":[
-    "bodyguard",
-    "werewolf",
-    "witch",
-    "seer",
-    "villager",
-    "gunner",
-    "fool"
-  ]
+  "clientId": "937245655016013904"
 }

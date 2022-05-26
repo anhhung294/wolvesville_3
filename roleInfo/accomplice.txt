@@ -6,6 +6,7 @@ If they vote different players, then the deciding vote will be the Accomplice's 
 The Accomplice can be killed by werewolves.
 
 Only villagers and random voting roles can be converted to Accomplice. Trying to convert a werewolf will result in the Bandit killing that werewolf. 
+
 If the Accomplice dies, the Bandit can select a new Accomplice the next night. If there are several accomplices in the same game, all of them win when the Bandit wins.
 
 Any Accomplice can kill without Bandit, but the Bandit needs an Accomplice to kill.

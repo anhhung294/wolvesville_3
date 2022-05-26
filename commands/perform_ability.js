@@ -2,28 +2,28 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const fs = require('fs');
 const {Collection} = require('discord.js');
 
-const files = fs.readdirSync('./commands/function').filter(file => file.endsWith('.js'));
+const files = fs.readdirSync('./commands/abilities').filter(file => file.endsWith('.js'));
 
 var functions = new Collection();
 
 for(let file of files){
-    let performFunction = require(`./function/${file}`);
+    let performFunction = require(`./abilities/${file}`);
     functions.set(performFunction.name, performFunction); 
 }
 
 const data = new SlashCommandBuilder()
-.setName('perform_function')
-.setDescription('Performing your function in game.')
-.addStringOption(option => option.setName('function').setDescription('Type your function.'))
+.setName('perform_ability')
+.setDescription('Performing your ability in game.')
+.addStringOption(option => option.setName('ability').setDescription('Type your ability.'))
 .addUserOption(option => option.setName('target').setDescription('Type your target  (optional)'));
 module.exports = {
     data: data,
     async execute(interaction){
-        const funcName = interaction.options.getString('function');
-        const performFunction = functions.get(funcName);
+        const ability = interaction.options.getString('ability');
+        const performFunction = functions.get(ability);
 
         if(!performFunction) return interaction.reply({
-            content: 'Failed function!',
+            content: 'Failed!',
             ephemeral: true
         });
 
@@ -33,6 +33,6 @@ module.exports = {
             ephemeral: true
         });
 
-        return performFunction.execute(interaction, funcName, target);
+        return performFunction.execute(interaction, ability, target);
     }
 }

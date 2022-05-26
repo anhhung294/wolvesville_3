@@ -1,4 +1,5 @@
-var {roles} = require('../../../config.json');
+const fs = require('fs');
+const roles = fs.readdirSync('./roleInfo').filter(file => file.endsWith('.txt')).map(file => file.slice(0,file.length-4));
 const guildModel = require('../../../models/guild.js');
 
 module.exports={

@@ -20,7 +20,10 @@ var guildSchema = new mongoose.Schema({
         default: 'ms'
     },
     host_channel: String,
-    isGameStarted: Boolean
+    isGameStarted: {
+        type: Boolean,
+        default: false
+    }
 });
 
 const guildModel = new mongoose.model('Guild', guildSchema);

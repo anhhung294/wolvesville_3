@@ -43,13 +43,11 @@ module.exports = {
         
         if(check!==prefix) return;
         
-        const args = msg.content.slice(prefix.length).split(/\s+/);
-
-        const command = args.shift();
+        const command = msg.content.slice(prefix.length).split(/\s+/).shift();
 
         try {
             const commandController = commands.get(command);
-            return commandController.execute(msg);
+            return commandController?.execute(msg);
         } catch (error) {
             console.error(error);
             await msg.channel.send({ content: 'There was an error while executing this command!'});
