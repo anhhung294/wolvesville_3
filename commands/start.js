@@ -2,17 +2,19 @@ const {SlashCommandBuilder} = require('@discordjs/builders');
 const shuffle = require('shuffle-array');
 const guildModel = require('../models/guild.js');
 const {MessageEmbed}  = require('discord.js');
+const fs = require('fs');
 
 const data = new SlashCommandBuilder()
 .setName('start')
 .setDescription('Start game.');
 
-function embedSendToUser(member, role){
+async function embedSendToUser(role){
+    const data = await fs.readFileSync(`./roleInfo/${role}.txt`, 'utf-8');
     return new MessageEmbed()
     .setTitle('Your role:')
     .setThumbnail(`attachment://${role}.png`)
     .setColor('BLUE')
-    .addField(role, '\u200b');
+    .addField(role.toUpperCase(), data);
 }
 
 module.exports = {
@@ -20,12 +22,13 @@ module.exports = {
     async execute(interaction){
         const memberStart = interaction.member;
         const voiceState = memberStart.voice;
+        const voiceChannel = voiceState.channel;
         var guildDB = await guildModel.findOne({guildId: interaction.guildId});
         const rolesInGame = shuffle(guildDB.roles);
         var player = guildDB.player;
         
         
-        if(!voiceState.channel) return interaction.reply({
+        if(!voiceChannel) return interaction.reply({
             content: `You are not in any voice channel!`,
             ephemeral: true   
         });
@@ -35,12 +38,11 @@ module.exports = {
             ephemeral: true
         });
 
-        if(guildDB.host_channel!==interaction.channel.id) return interaction.reply({
-            content: 'Please start in host channel!',
-            ephemeral: true
-        });
+        const hostChannel = voiceChannel.messages.channel;
 
-        const membersInVoice = await voiceState.channel.members.filter(member => !member.user.bot).toJSON();
+        guildDB.host_channel = hostChannel.id;
+
+        const membersInVoice = await voiceChannel.members.filter(member => !member.user.bot).toJSON();
         
         if(membersInVoice.length!==rolesInGame.length) return interaction.reply({
             content: 'The number of people join in voice channel is different from the number of roles in game.',
@@ -54,12 +56,15 @@ module.exports = {
             player.push(`${member.id}-${role}`);
             
             await member.user.send({
-                embeds:[embedSendToUser(member, role)],
+                embeds:[await embedSendToUser(role)],
                 files: [`./role_images/${role}.png`]
             }); 
         }
-
-        const parentChannel = interaction.channel.parent;
         
+        await guildDB.save();
+
+        await voiceChannel.setName('Werewolves Village');
+
+        return interaction.reply('Game started');
     }
 }

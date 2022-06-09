@@ -17,6 +17,7 @@
     "edit-json-file": "^1.7.0",
     "fast-average-color": "^7.1.0",
     "fast-average-color-node": "^2.1.0",
+    "ffmpeg-static": "^5.0.0",
     "mongoose": "^6.2.2",
     "nodemon": "^2.0.16",
     "save": "^2.4.0",

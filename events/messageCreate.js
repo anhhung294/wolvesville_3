@@ -20,11 +20,11 @@ for(let file of botCommandFiles){
 module.exports = {
 	name: 'messageCreate',
 	async execute(msg) {
-		const guildDB = await guildModel.findOne({guildId: msg.guild.id});
+		const guildDB = await guildModel.findOne({guildId: msg.guildId});
         
         if(!guildDB){
             const newGuildDB = new guildModel({
-                guildId: msg.guild.id
+                guildId: msg.guildId
             });
 
             await newGuildDB.save();
