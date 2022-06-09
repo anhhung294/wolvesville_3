@@ -12,10 +12,8 @@ module.exports={
     async execute(interaction, args){
         var guildDB = await guildModel.findOne({guildId: interaction.guildId});
 
-        var rolesInGame = guildDB.roles;
-
         if(args.includes('all')){
-            rolesInGame = [];
+            guildDB.roles = [];
             await guildDB.save();
             return interaction.editReply({
                 content: 'All roles were removed'
@@ -26,14 +24,14 @@ module.exports={
             let [role, number] = deleteRole.split('-');
             number = Number(number);
             for(let i=0; i< number; i++){
-               rolesInGame.removeElementInArray(role);
+               guildDB.roles.removeElementInArray(role);
             }
         });
 
         await guildDB.save();
 
         return interaction.editReply({
-            content: `Remain roles after being deleted: ${rolesInGame.map(role => ' '+role)}`
+            content: `Remain roles after being deleted: ${guildDB.roles.map(role => ' '+role)}`
         });
     }
 }

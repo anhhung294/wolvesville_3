@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'start',
+    name: 'end',
     async execute(msg){
         return msg.channel.send('Started');
     }

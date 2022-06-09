@@ -19,7 +19,8 @@
     "fast-average-color-node": "^2.1.0",
     "mongoose": "^6.2.2",
     "nodemon": "^2.0.16",
-    "save": "^2.4.0"
+    "save": "^2.4.0",
+    "shuffle-array": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "^8.8.0",
