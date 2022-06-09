@@ -63,7 +63,7 @@ module.exports = {
         
         await guildDB.save();
 
-        await voiceChannel.setName('Werewolves Village');
+        await voiceChannel.setName('Werewolves Village').setUserLimit(membersInVoice.length);
 
         return interaction.reply('Game started');
     }
