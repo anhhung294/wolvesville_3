@@ -18,9 +18,15 @@ module.exports={
             }
         }
 
-        await guildModel.findOneAndUpdate({guildId: interaction.guildId},{$push: {roles: {$each: result}}});
+        const guildDB = await guildModel.findOne({guildId: interaction.guildId});
+
+        if(guildDB.isGameStarted) return interaction.editReply('This server is playing game!');
+
+        await guildDB.roles.push(...result);
+
+        await guildDB.save();
         
-        return interaction.channel.send({
+        return interaction.editReply({
             content:`Added ${result.map(role => ' '+role)}`,
             ephemeral: true
         });

@@ -3,26 +3,22 @@ const selectMenu = require('../utilities/selectMenu.js');
 const {MessageActionRow} = require('discord.js');
 const guildModel = require('../models/guild.js');
 
-
-module.exports={
-    name : 'test',
-    async execute(msg){
-        const guild = msg.guild;
-        const hostChannel = msg.channel;
+module.exports = {
+    name: 'werewolf',
+    async execute(guild, hostChannel){
         const embedSend = await embed(null, 'werewolves\' turn', null, [{name: 'Select a villager to kill', value: '\u200B'}] ,'werewolf');
         const guildDB = await guildModel.findOne({
             guildId : guild.id
         });
         const werewolvesId = guildDB.player.filter(p => /werewolf$/.test(p)).map(p => p.split('-')[1]);
-        var options = guildDB.player.map(p => p.split('-')[0]);
 
-        for(let i=0; i< options.length; i++){
-            let member = await guild.members.cache.get(options[i]);
-            options.splice(i,1,member);
-        }
-
-        options = options.map( p => {
-            return {label: p.displayName, value: p.user.id};
+        const options = await guildDB.player.map(async p => {
+            let id = p.split('-')[0];
+            let member = await guild.members.cache.get(id);
+            return {
+                label: member.displayName,
+                value: id
+            }
         });
 
         const row = new MessageActionRow().addComponents(selectMenu('werewolfSelection', options, null, 1));
@@ -33,10 +29,10 @@ module.exports={
             components: [row]
         });
 
-        const collector = await mess.createMessageComponentCollector({
+        const collector = mess.createMessageComponentCollector({
             componentType: 'SELECT_MENU',
             time: 30000,
-            //filter: (i) => werewolvesId.includes(i.user.id)
+            filter: (i) => werewolvesId.includes(i.user.id)
         });
 
         collector.on('collect', i =>{

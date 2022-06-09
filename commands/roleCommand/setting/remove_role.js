@@ -12,6 +12,8 @@ module.exports={
     async execute(interaction, args){
         var guildDB = await guildModel.findOne({guildId: interaction.guildId});
 
+        if(guildDB.isGameStarted) return interaction.editReply('This server is playing game!');
+
         if(args.includes('all')){
             guildDB.roles = [];
             await guildDB.save();

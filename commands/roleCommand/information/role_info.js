@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js');
+const embed = require('../../../utilities/embed.js');
 const fs = require('fs');
 const files1 = fs.readdirSync('./roleInfo').filter(file => file.endsWith('.txt'));
 
@@ -10,18 +10,13 @@ module.exports ={
                     content:`This role (${arg}) doesn't exist`,
                 });
             }
-            return fs.readFile('./roleInfo/'+arg+'.txt','utf-8',(err,d)=>{
-                const embed = new MessageEmbed()
-                   .setTitle(arg)
-                   .setThumbnail(`attachment://${arg}.png`)
-                   .setColor('BLUE')
-                   .setDescription(d);
+            let data =  fs.readFileSync('./roleInfo/'+arg+'.txt','utf-8'); 
+            const embedSend = await embed(null, arg, data, null, arg);
                 return interaction.editReply({
-                   embeds:[embed],
+                   embeds:[embedSend],
                    files:[`./role_images/${arg}.png`],
                    content:"---------------------------------------------"
                });   
-            }); 
         })
     }
 }

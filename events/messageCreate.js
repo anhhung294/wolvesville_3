@@ -21,15 +21,14 @@ module.exports = {
 	name: 'messageCreate',
 	async execute(msg) {
 		const guildDB = await guildModel.findOne({guildId: msg.guildId});
-        
-        if(!guildDB){
+        if(!guildDB&&msg.channel.type!=='DM'){
             const newGuildDB = new guildModel({
                 guildId: msg.guildId
             });
 
             await newGuildDB.save();
 
-            return msg.channel.send('Hãy thử lại 1 lần nữa');
+            return msg.channel.send('Please try again!');
         }
 
         if(msg.client.user.id===msg.author.id){

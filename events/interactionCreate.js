@@ -11,7 +11,7 @@ module.exports = {
 
         const guildDB = await guildModel.findOne({guildId: interaction.guildId});
         
-        if(!guildDB){
+        if(!guildDB&&interaction.channel.type!=='DM'){
             const newGuildDB = new guildModel({
                 guildId: interaction.guildId
             });
