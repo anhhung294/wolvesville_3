@@ -23,6 +23,10 @@ var guildSchema = new mongoose.Schema({
     isGameStarted: {
         type: Boolean,
         default: false
+    },
+    day:{
+        type: [Number],
+        default:[0,1]
     }
 });
 

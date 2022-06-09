@@ -18,5 +18,6 @@ module.exports={
             embeds: [await embedSendToUser(msg.author, 'werewolf')],
             files: ['./role_images/werewolf.png']
         });
+        
     }
 }
