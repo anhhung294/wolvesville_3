@@ -9,7 +9,7 @@ module.exports = {
     async execute(msg){
         let guild = msg.guild;
         let hostChannel = msg.channel
-        const embedSend = await embed(null, 'werewolves\' turn', null, [{name: 'Select a villager to kill', value: '\u200B'}] ,'werewolf');
+        const embedSend = await embed(null, 'werewolves\' turn', null, [{name: 'Select a villager to kill', value: '\u200B'}] ,'./role_images/werewolf.png');
         const guildDB = await guildModel.findOne({
             guildId : guild.id
         });

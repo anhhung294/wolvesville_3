@@ -7,12 +7,12 @@ const mode = require('../utilities/mode.js');
 module.exports = {
     name: 'werewolf',
     async execute(guild, hostChannel){
-        const embedSend = await embed(null, 'werewolves\' turn', null, [{name: 'Select a villager to kill', value: '\u200B'}] ,'werewolf');
+        const embedSend = await embed(null, 'werewolves\' turn', null, [{name: 'Select a villager to kill', value: '\u200B'}] ,'./role_images/werewolf.png');
         const guildDB = await guildModel.findOne({
             guildId : guild.id
         });
 
-        const werewolvesId = guildDB.player.filter(p => /werewolf$/.test(p)).map(p => p.split('-')[1]);
+        const werewolvesId = guildDB.player.filter(p => /werewolf$/.test(p)).map(p => p.split('-')[0]);
 
         var options = [...guildDB.player];
 
@@ -81,6 +81,8 @@ module.exports = {
             guildDB.log += `|werewolf-kill-${diePersonId}`;
             
             await guildDB.save();
+
+            return hostChannel.send('next_turn werewolf');
         });
     }
 }

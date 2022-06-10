@@ -6,7 +6,7 @@ module.exports = {
 
         const {roles} = guildDB;
          
-        const rolesInGame = roles?roles.map(role => ' '+role):'nothing';
+        const rolesInGame = roles.length>0?roles.map(role => ' '+role):'nothing';
 
         return interaction.editReply({
             content: `Roles in game: ${rolesInGame}`,

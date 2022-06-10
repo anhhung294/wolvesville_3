@@ -1,5 +1,5 @@
 {
   "clientId": "937245655016013904",
-  "roles": [],
+  "roles": ["werewolf"],
   "dayNight": ["Night", "Day"]
 }

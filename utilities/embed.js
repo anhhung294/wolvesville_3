@@ -1,7 +1,7 @@
 const {MessageEmbed} = require('discord.js');
 const {getAverageColor} = require('fast-average-color-node');
 
-module.exports = async function(color = 'BLUE', title, description, fields, thumbnail, image){
+module.exports = async function(color = 'BLUE', title=null, description=null, fields, thumbnailLink=null, imageLink=null){
     var embed = new MessageEmbed().setColor(color).setTimestamp();
 
     if(title&&typeof(title)==='string'){
@@ -9,26 +9,26 @@ module.exports = async function(color = 'BLUE', title, description, fields, thum
     }
 
     if(description&&typeof(description)==='string'){
-        embed.setDescription(description);
+       embed.setDescription(description);
     }
 
     if(fields&&fields?.length>0&&Array.isArray(fields)&&fields.map(f => f.name).length===fields.map(f => f.value).length){
         embed.setFields(...fields);
     }
 
-    if(image&&typeof(image)==='string'){
-        embed.setImage(`attachment://${image}.png`);
-        let colorN = await getAverageColor(`./role_images/${image}.png`);
+    if(imageLink&&typeof(imageLink)==='string'){
+        let image = imageLink.split('/').pop();
+        embed.setImage(`attachment://${image}`);
+        let colorN = await getAverageColor(`${imageLink}`);
         embed.setColor(colorN.hex);
     }
 
-    if(thumbnail&&typeof(thumbnail)==='string'){
-        embed.setThumbnail(`attachment://${thumbnail}.png`);
-        let colorN = await getAverageColor(`./role_images/${thumbnail}.png`);
+    if(thumbnailLink&&typeof(thumbnailLink)==='string'){
+        let thumbnail = thumbnailLink.split('/').pop();
+        embed.setThumbnail(`attachment://${thumbnail}`);
+        let colorN = await getAverageColor(`${thumbnailLink}`);
         embed.setColor(colorN.hex);
     }
 
     return embed;
-
-
 }
