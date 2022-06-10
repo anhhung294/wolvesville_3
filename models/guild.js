@@ -27,7 +27,8 @@ var guildSchema = new mongoose.Schema({
     day:{
         type: [Number],
         default:[0,1]
-    }
+    },
+    log: String
 });
 
 const guildModel = new mongoose.model('Guild', guildSchema);
