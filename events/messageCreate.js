@@ -32,7 +32,7 @@ module.exports = {
         }
 
         if(msg.client.user.id===msg.author.id){
-            let command = botCommands.get(msg.content);
+            let command = botCommands.get(msg.content.split(/\s+/)[0]);
             return command?.execute(msg);
         }
 

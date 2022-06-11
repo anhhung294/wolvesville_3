@@ -14,7 +14,11 @@ module.exports ={
         const nowRole = msg.content.split(/\s+/)[1];
         const nowIndex = roles.indexOf(nowRole);
 
-        if(nowIndex===(roles.length-1)) return msg.channel.send('next');
+        if(nowIndex===(roles.length-1)){
+            let mess = await msg.channel.send('next');
+            await mess.delete();
+            return;
+        }
 
         const controller = await controllers.get(roles[nowIndex+1]);
 

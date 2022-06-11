@@ -21,7 +21,9 @@
     "mongoose": "^6.2.2",
     "nodemon": "^2.0.16",
     "save": "^2.4.0",
-    "shuffle-array": "^1.0.1"
+    "shuffle-array": "^1.0.1",
+    "timer-node": "^5.0.5",
+    "wait": "^0.4.2"
   },
   "devDependencies": {
     "eslint": "^8.8.0",

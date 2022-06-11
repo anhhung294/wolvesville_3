@@ -1,5 +1,6 @@
 {
   "clientId": "937245655016013904",
   "roles": ["werewolf"],
+  "rolesExecuteAfterNight": [],
   "dayNight": ["Night", "Day"]
 }

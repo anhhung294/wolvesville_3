@@ -82,7 +82,11 @@ module.exports = {
             
             await guildDB.save();
 
-            return hostChannel.send('next_turn werewolf');
+            let mess = await hostChannel.send({
+                content:'next_turn werewolf'
+            });
+
+            return mess.delete();
         });
     }
 }

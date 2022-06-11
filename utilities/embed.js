@@ -2,7 +2,7 @@ const {MessageEmbed} = require('discord.js');
 const {getAverageColor} = require('fast-average-color-node');
 
 module.exports = async function(color = 'BLUE', title=null, description=null, fields, thumbnailLink=null, imageLink=null){
-    var embed = new MessageEmbed().setColor(color).setTimestamp();
+    var embed = new MessageEmbed().setTimestamp();
 
     if(title&&typeof(title)==='string'){
         embed.setTitle(title);
@@ -28,6 +28,10 @@ module.exports = async function(color = 'BLUE', title=null, description=null, fi
         embed.setThumbnail(`attachment://${thumbnail}`);
         let colorN = await getAverageColor(`${thumbnailLink}`);
         embed.setColor(colorN.hex);
+    }
+
+    if(color){
+        embed.setColor(color);
     }
 
     return embed;
