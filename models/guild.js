@@ -28,7 +28,12 @@ var guildSchema = new mongoose.Schema({
         type: [Number],
         default:[0,1]
     },
-    log: String
+    log: String,
+    vote: {
+        type: Object,
+        default: {'123':'abc'}
+    },
+    fieldVote: [Object]
 });
 
 const guildModel = new mongoose.model('Guild', guildSchema);

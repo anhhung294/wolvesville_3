@@ -11,7 +11,7 @@ const data = new SlashCommandBuilder()
 
 async function embedSendToUser(role){
     const data = await fs.readFileSync(`./roleInfo/${role}.txt`, 'utf-8');
-    let embedSend = await embed('BLUE', 'Your role:', null, [{name: role.toUpperCase(), value: data||'\u200B'}], `./role_images/${role}.png`);
+    let embedSend = await embed(null, `Your role: ${role.toUpperCase()}`, data, null, `./role_images/${role}.png`);
     return embedSend;
 }
 

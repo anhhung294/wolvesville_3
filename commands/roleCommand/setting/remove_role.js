@@ -24,16 +24,16 @@ module.exports={
 
         args.forEach(function(deleteRole){
             let [role, number] = deleteRole.split('-');
-            number = Number(number);
+            number = Number(number||1);
             for(let i=0; i< number; i++){
                guildDB.roles.removeElementInArray(role);
             }
         });
-
++
         await guildDB.save();
 
         return interaction.editReply({
-            content: `Remain roles after being deleted: ${guildDB.roles.map(role => ' '+role)}`
+            content: `Remain roles after being deleted: ${guildDB.roles.map(role => ' '+role).length>0?guildDB.roles.map(role => ' '+role):'nothing'}`
         });
     }
 }
