@@ -1,7 +1,6 @@
 const {SlashCommandBuilder} = require('@discordjs/builders');
 const shuffle = require('shuffle-array');
 const guildModel = require('../models/guild.js');
-const {MessageEmbed}  = require('discord.js');
 const fs = require('fs');
 const embed = require('../utilities/embed.js');
 

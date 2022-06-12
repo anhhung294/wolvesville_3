@@ -20,7 +20,7 @@ module.exports = {
                 });
 
                 mess = await msg.channel.send({
-                    content: 'start_discussion'
+                    content: 'Loading ...'
                 });
 
                 break;
