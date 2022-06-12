@@ -5,6 +5,14 @@ const embed = require('../utilities/embed.js');
 const {MessageEmbed, MessageActionRow, MessageSelectMenu} = require('discord.js');
 const mode = require('../utilities/mode.js');
 
+Array.prototype.removeElementInArray = function(element){
+    let result = this.indexOf(element);
+    if(result > -1){
+        this.splice(result, 1);
+    }
+    return this;
+}
+
 module.exports = {
     name: 'start_discussion',
     async execute(msg){
@@ -114,8 +122,9 @@ module.exports = {
             let inGuildDB = await guildModel.findOne({guildId: msg.guildId});
             let inFieldVote = inGuildDB.fieldVote;
             let playerVoted = mode(inFieldVote.map(p => new Array(Number(p.value)).fill('').map(e => p.name)).flat());
-            //TODO: computing after vote
-            console.log(playerVoted);
+            
+            let mess = await msg.channel.send('end_discussion '+playerVoted);
+            return mess.delete();
         });
 
         await wait((timeDiscussion-5)*1000);

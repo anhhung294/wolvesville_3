@@ -1,6 +1,9 @@
+const guidModel = require('../models/guild.js');
+
+
 module.exports={
     name:'end_discussion',
     async execute(msg){
-        //TODO: add end_discussion computing
+        const playerVoted = msg.content.split(/\s+/).pop();
     }
 }

@@ -1,5 +1,13 @@
 const guildModel = require('../models/guild.js');
 const embed = require('../utilities/embed.js');
+const fs = require('fs')
+const models = new Map();
+const modelFiles = fs.readdirSync('./models');
+
+for(let modelFile of modelFiles){
+    let model = require(`../models/${modelFile}`);
+    models.set(modelFile.slice(0, modelFiles.length-3), model);
+} 
 
 Array.prototype.removeElementInArray = function(element){
     let result = this.indexOf(element);
@@ -39,6 +47,10 @@ module.exports = {
         for(let [id, heart] of Object.entries(life)){
             if(heart<0){
                 let die = await msg.guild.members.cache.get(id);
+
+                let model = models.get(playerRoles[id]);
+
+                await model.findOneAndDelete({playerId: id});
 
                 await guildModel.findOneAndUpdate({guildId: msg.guild.id},{player: guildDB.player.removeElementInArray(`${id}-${playerRoles[id]}`)});
 
